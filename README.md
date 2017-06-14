@@ -1,4 +1,4 @@
-# react-template 
+# hot-and-cold
 
 a react implementation of a hot and cold number guessing game
 
