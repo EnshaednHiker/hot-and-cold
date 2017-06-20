@@ -31,7 +31,7 @@ module.exports = function (env){
         module: {
             loaders: [
                 { test: /\.(js|jsx)$/, loader: 'babel-loader', exclude: /node_modules/ },
-                { test: /\.css$/, loader: 'style-loader!css-loader' },
+                { test: /\.css$/, loader: 'style-loader!css-loader'},
                 { test: /\.(png|jpg|gif)$/, loader: 'file-loader', options: {name: 'assets/images/[name].[ext]'}},
                 { test: /\.(woff|woff2)(\?v=\d+\.\d+\.\d+)?$/, loader: 'file-loader' , options: {name: 'assets/fonts/[name].[ext]'}},
                 { test: /\.(eot|ttf|svg)$/, loader: 'file-loader', options: {name: 'assets/fonts/[name].[ext]'} }
@@ -40,7 +40,7 @@ module.exports = function (env){
         plugins: [
             new webpack.HotModuleReplacementPlugin(),
             new html({template:path.join(__dirname,"index.html")}),
-            new dotenv({path:path.join(__dirname,".env")})
+            new dotenv({path:path.join(__dirname,".env")}),
         ]
     }
 }

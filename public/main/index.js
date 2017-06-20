@@ -1,20 +1,40 @@
 import React from 'react';
 import Dom from 'react-dom';
+import NavigationBar from '~/components/NavigationBar/index.js'
+import Game from '~/components/Game/index.js'
+import styles from '~/assets/styles/main.css';
 
 
 class Main extends React.Component {
     constructor(){
         super()
         this.state = {
-            title: 'title' 
+            title: 'HOT or COLD' 
         }
     }
     render() {
-        return (<h1>{this.state.title}</h1>)
+        const style = {
+            backgroundColor: '#1F253D',
+            position: 'absolute',
+            top: 0,
+            paddingTop: '100px',
+            bottom: '0%',
+            left: 0,
+            right: '0%',
+            zIndex: 99,
+            color: 'white'
+        }
+    
+        return (
+                <div style={style}>
+                    <NavigationBar />
+                    <h1 className="text-center text-white">{this.state.title}</h1>
+                    <Game />
+                </div>
+            )
     } 
 }
  
 export default function (next) {
     Dom.render(<Main />, document.getElementById('root'));
-    next();
 } 
