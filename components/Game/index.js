@@ -2,61 +2,134 @@ import React from 'react';
 import Dom from 'react-dom';
 import CSS from '~/assets/styles/game.css';
 
+
 export default class Game extends React.Component {
     constructor(props){
-        super(props)
+        super()
         this.state ={
+            currentGuess: null,
+            pastGuesses: [],
+            numberToGuess: this.getRandomInt(props.min,props.max),
+            input: null,
+            feedback: ""
+        };
 
+        this.feedbackMap = {
+            hot: {min:1, max: 10},
+            warm: {min: 11, max: 50},
+            cold: {min:51, max: props.max-2},
+            win: {min: 0, max: 0}
         }
+
+        this.onSubmit = this.onSubmit.bind(this);
+        this.getRandomInt = this.getRandomInt.bind(this);
+        this.getCurrentGuess = this.getCurrentGuess.bind(this);
+        this.setCurrentGuess = this.setCurrentGuess.bind(this);
+        this.setPastGuesses = this.setPastGuesses.bind(this);
+        this.getFeedback = this.getFeedback.bind(this);
+        this.setFeedback = this.setFeedback.bind(this);
+        this.endGame = this.endGame.bind(this)
+    }
+
+    onSubmit (e) {
+        e.preventDefault();
+        let currentGuess = this.getCurrentGuess(e);
+        this.setCurrentGuess(currentGuess);
+        this.refs.input.value = "";
+        this.setPastGuesses(currentGuess);
+        let feedback = this.getFeedback(currentGuess);
+        this.setFeedback(feedback);
+    }
+
+    getFeedback (guess) {
+        let delta = Math.abs(guess - this.state.numberToGuess);
+
+        return Object.keys(this.feedbackMap).filter((feedback)=>{
+            return (delta >= this.feedbackMap[feedback].min && delta <= this.feedbackMap[feedback].max)
+        })[0];
+    }
+
+    endGame () {
+        this.setState({
+            currentGuess: null,
+            pastGuesses: [],
+            numberToGuess: this.getRandomInt(this.props.min,this.props.max),
+            input: null,
+            feedback: ""
+        });
+    }
+
+    setFeedback (feedback){
+        this.setState({feedback:feedback});
+    }
+
+    setPastGuesses(guess) {
+        this.state.pastGuesses.unshift(guess);
+        this.setState({pastGuesses: this.state.pastGuesses});
+    }
+
+    getCurrentGuess(e) {
+        let currentGuess = $('form').serializeArray();
+        console.log("current guess: ",currentGuess[0].value);
+        return currentGuess[0].value;
+    }
+
+    setCurrentGuess(guess){
+        this.setState({currentGuess:guess});
+
+    }
+
+    getRandomInt(min, max) {
+      min = Math.ceil(min);
+      max = Math.floor(max);
+        return Math.floor(Math.random() * (max - min)) + min; //The maximum is exclusive and the minimum is inclusive
     }
 
     render(){
-
+        
         return (
-            <div>
-                                    
+            <div>                  
                 <div className="container">
                     <div className="background-color-crimson feedback-div game-width">
-                        <p className="feedback-text">cold</p>
+                        <p className="feedback-text">{this.state.feedback}</p>
                     </div>
                     <div className="background-color-darkblue game-width form-div">
-                       <form>
-                          <div className="form-group">
-                            <label htmlFor="Guess"></label>
-                            <input type="number" required className="form-control" id="guess" placeholder="Enter your Guess in numbers only"></input>
-                          </div>
-                          <button type="submit" className="btn btn-default">Guess</button>
-                        </form>
-                        <p className="guess-count">Guess #<span className="guess-span">1</span></p>
+                        {
+                            (()=>{
+                                if (this.state.feedback !=="win") {
+                                    return (
+                                        <form onSubmit={this.onSubmit}>
+                                           <div className="form-group">
+                                             <label htmlFor="Guess"></label>
+                                             <input  ref="input" defaultValue={this.state.input} type="number" min={this.props.min} max={this.props.max-1} name="guess" required className="form-control" placeholder="Enter your Guess in numbers only"></input>
+                                           </div>
+                                           <button  type="submit" className="btn btn-default">Guess</button>
+                                         </form>
+                                    )
+                                }   else {
+                                        return (
+                                            <div className="endGame">
+                                                <p>You won!<br />Wanna play a new game?</p>
+                                                <button onClick={this.endGame} className="btn btn-default">New Game</button>
+                                            </div>  
+                                    )
+                                }
+                            })()
+                        }
+                        <p className="guess-count">Guess #<span className="guess-span">{this.state.pastGuesses.length}</span> of {this.props.allowedGuesses}!</p>
                     </div>
                     <div className="background-color-lightseagreen game-width guess-div">
                         <ul className="guess-list">
-                            <li>14</li>
-                            <li>33</li>
-                            <li>2</li>
-                            <li>14</li>
-                            <li>33</li>
-                            <li>2</li>
-                            <li>14</li>
-                            <li>33</li>
-                            <li>2</li>
-                            <li>14</li>
-                            <li>33</li>
-                            <li>2</li>
-                            <li>14</li>
-                            <li>33</li>
-                            <li>2</li>
-                            <li>14</li>
-                            <li>33</li>
-                            <li>2</li>
-                            <li>14</li>
-                            <li>33</li>
-                            <li>2</li>
+                            {
+                               this.state.pastGuesses.map((pastGuess,index)=>{
+                                    return <li key={index}>{pastGuess}</li>
+                                })
+                            }
                         </ul>
                     </div>
                 </div>
             </div>
-            )
+        )
     }   
     
 }

@@ -8,6 +8,7 @@ export default class NavigationBar extends React.Component {
 
         }
     }
+
     render(){
 
         return (
@@ -15,7 +16,7 @@ export default class NavigationBar extends React.Component {
                     <div className="container">
                         <ul className="nav navbar-nav">
                             <li><a href="#">What?</a></li>
-                            <li><a href="#">+New Game</a></li>
+                            <li><a href="#" >+New Game</a></li>
                         </ul>
                     </div>
                 </nav>

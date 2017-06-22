@@ -27,9 +27,9 @@ class Main extends React.Component {
     
         return (
                 <div style={style}>
-                    <NavigationBar />
+                    <NavigationBar  />
                     <h1 className="text-center text-white">{this.state.title}</h1>
-                    <Game />
+                    <Game min="1" max="101" allowedGuesses="20" />
                 </div>
             )
     } 
