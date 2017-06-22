@@ -15,7 +15,6 @@ export default class NavigationBar extends React.Component {
                 <nav className="navbar navbar-default navbar-fixed-top">
                     <div className="container">
                         <ul className="nav navbar-nav">
-                            <li><a href="#" >What?</a></li>
                             <li><a href="/" >+New Game</a></li>
                         </ul>
                     </div>
