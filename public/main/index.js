@@ -12,6 +12,7 @@ class Main extends React.Component {
             title: 'HOT or COLD' 
         }
     }
+
     render() {
         const style = {
             backgroundColor: '#1F253D',
