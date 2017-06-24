@@ -15,9 +15,9 @@ export default class Game extends React.Component {
         };
 
         this.feedbackMap = {
-            hot: {min:1, max: 10},
-            warm: {min: 11, max: 50},
-            cold: {min:51, max: props.max-2},
+            hot: {min:1, max: 10,closer:"hotter", further: "cooler"},
+            warm: {min: 11, max: 50, closer: "warmer", further: "cooler"},
+            cold: {min:51, max: props.max-2, closer: "warmer", further: "colder"},
             win: {min: 0, max: 0}
         }
 
@@ -27,6 +27,7 @@ export default class Game extends React.Component {
         this.setCurrentGuess = this.setCurrentGuess.bind(this);
         this.setPastGuesses = this.setPastGuesses.bind(this);
         this.getFeedback = this.getFeedback.bind(this);
+        this.getRelativeFeedback = this.getRelativeFeedback.bind(this);
         this.setFeedback = this.setFeedback.bind(this);
         this.endGame = this.endGame.bind(this)
     }
@@ -38,7 +39,26 @@ export default class Game extends React.Component {
         this.refs.input.value = "";
         this.setPastGuesses(currentGuess);
         let feedback = this.getFeedback(currentGuess);
-        this.setFeedback(feedback);
+        if (this.state.pastGuesses.length > 1 && feedback !== "win") {
+            console.log(this.state.pastGuesses[0],this.state.pastGuesses[1]);
+            let relativeFeedback = this.getRelativeFeedback(currentGuess, this.state.pastGuesses[1], feedback);
+            this.setFeedback(relativeFeedback);
+        } else {
+            this.setFeedback(feedback);
+        }
+    }
+
+    getRelativeFeedback (currentGuess, lastGuess, feedback) {
+        let currentGuessDelta = Math.abs(currentGuess - this.state.numberToGuess);
+        let lastGuessDelta = Math.abs(lastGuess - this.state.numberToGuess);
+        if (currentGuessDelta > lastGuessDelta)
+            return this.feedbackMap[feedback].further;
+        else if (currentGuessDelta < lastGuessDelta) {
+            return this.feedbackMap[feedback].closer;
+        }
+        else {
+            return `same, ${feedback}`;
+        }
     }
 
     getFeedback (guess) {

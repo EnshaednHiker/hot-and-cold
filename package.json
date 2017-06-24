@@ -6,7 +6,8 @@
   "scripts": {
     "test": "test",
     "start": "./node_modules/.bin/webpack-dev-server",
-    "build": "webpack -p"
+    "build": "webpack -p",
+    "deploy": "git push origin :gh-pages && git subtree push --prefix dist origin gh-pages"
   },
   "author": "EnshaednHiker",
   "license": "ISC",
