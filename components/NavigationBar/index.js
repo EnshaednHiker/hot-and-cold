@@ -7,6 +7,11 @@ export default class NavigationBar extends React.Component {
         this.state = {
 
         }
+        this.onClick = this.onClick.bind(this);
+    }
+
+    onClick() {
+        window.location.reload();
     }
 
     render(){
@@ -15,7 +20,7 @@ export default class NavigationBar extends React.Component {
                 <nav className="navbar navbar-default navbar-fixed-top">
                     <div className="container">
                         <ul className="nav navbar-nav">
-                            <li><a href="/" >+New Game</a></li>
+                            <li><a onClick={this.onClick} className="btn" role="button" >+New Game</a></li>
                         </ul>
                     </div>
                 </nav>
