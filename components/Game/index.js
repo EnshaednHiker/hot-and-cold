@@ -34,6 +34,7 @@ export default class Game extends React.Component {
 
     onSubmit (e) {
         e.preventDefault();
+
         let currentGuess = this.getCurrentGuess(e);
         this.setCurrentGuess(currentGuess);
         this.refs.input.value = "";
@@ -116,21 +117,28 @@ export default class Game extends React.Component {
                     <div className="background-color-darkblue game-width form-div">
                         {
                             (()=>{
-                                if (this.state.feedback !=="win") {
+                                if (this.state.feedback !=="win" && this.state.pastGuesses.length < 20) {
                                     return (
                                         <form onSubmit={this.onSubmit}>
                                            <div className="form-group">
                                              <label htmlFor="Guess"></label>
                                              <input  ref="input" defaultValue={this.state.input} type="number" min={this.props.min} max={this.props.max-1} name="guess" required className="form-control" placeholder="Enter your Guess in numbers only"></input>
                                            </div>
-                                           <button  type="submit" className="btn btn-default">Guess</button>
+                                           <button  type="submit" className="btn btn-default playingButton">Guess</button>
                                          </form>
                                     )
+                                } else if (this.state.feedback !=="win" && this.state.pastGuesses.length === 20) {
+                                        return (
+                                             <div className="endGame">
+                                                <p>You lost. :(<br />Wanna play a new game? Try, try, again!</p>
+                                                <button onClick={this.endGame} className="btn btn-default lostButton">New Game</button>
+                                            </div> 
+                                        )
                                 }   else {
                                         return (
                                             <div className="endGame">
                                                 <p>You won!<br />Wanna play a new game?</p>
-                                                <button onClick={this.endGame} className="btn btn-default">New Game</button>
+                                                <button onClick={this.endGame} className="btn btn-default playAgainButton">New Game</button>
                                             </div>  
                                     )
                                 }

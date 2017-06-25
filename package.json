@@ -4,7 +4,7 @@
   "description": "a react implementation of a hot and cold number guessing game",
   "main": "index.js",
   "scripts": {
-    "test": "test",
+    "test": "nightwatch ",
     "start": "./node_modules/.bin/webpack-dev-server",
     "build": "webpack -p",
     "deploy": "git push origin :gh-pages && git subtree push --prefix dist origin gh-pages"
