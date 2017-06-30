@@ -1,274 +1,71 @@
-19:20:28.558 INFO - Selenium build info: version: '3.4.0', revision: 'unknown'
-19:20:28.560 INFO - Launching a standalone Selenium Server
-2017-06-24 19:20:28.581:INFO::main: Logging initialized @229ms to org.seleniumhq.jetty9.util.log.StdErrLog
-19:20:28.629 INFO - Driver class not found: com.opera.core.systems.OperaDriver
-19:20:28.629 INFO - Driver provider com.opera.core.systems.OperaDriver registration is skipped:
+20:04:14.515 INFO - Selenium build info: version: '3.3.0', revision: 'b526bd5'
+20:04:14.516 INFO - Launching a standalone Selenium Server
+2017-06-29 20:04:14.542:INFO::main: Logging initialized @299ms to org.seleniumhq.jetty9.util.log.StdErrLog
+20:04:14.612 INFO - Driver class not found: com.opera.core.systems.OperaDriver
+20:04:14.613 INFO - Driver provider com.opera.core.systems.OperaDriver registration is skipped:
 Unable to create new instances on this machine.
-19:20:28.629 INFO - Driver class not found: com.opera.core.systems.OperaDriver
-19:20:28.629 INFO - Driver provider com.opera.core.systems.OperaDriver is not registered
-19:20:28.630 INFO - Driver provider org.openqa.selenium.safari.SafariDriver registration is skipped:
+20:04:14.613 INFO - Driver class not found: com.opera.core.systems.OperaDriver
+20:04:14.613 INFO - Driver provider com.opera.core.systems.OperaDriver is not registered
+20:04:14.622 INFO - Driver provider org.openqa.selenium.safari.SafariDriver registration is skipped:
  registration capabilities Capabilities [{browserName=safari, version=, platform=MAC}] does not match the current platform WIN10
-2017-06-24 19:20:28.668:INFO:osjs.Server:main: jetty-9.4.3.v20170317
-2017-06-24 19:20:28.704:INFO:osjsh.ContextHandler:main: Started o.s.j.s.ServletContextHandler@d8355a8{/,null,AVAILABLE}
-2017-06-24 19:20:28.819:INFO:osjs.AbstractConnector:main: Started ServerConnector@5f2108b5{HTTP/1.1,[http/1.1]}{0.0.0.0:4444}
-2017-06-24 19:20:28.820:INFO:osjs.Server:main: Started @468ms
-19:20:28.820 INFO - Selenium Server is up and running
-19:20:29.086 INFO - SessionCleaner initialized with insideBrowserTimeout 0 and clientGoneTimeout 1800000 polling every 180000
-19:20:29.111 INFO - Executing: [new session: Capabilities [{acceptSslCerts=true, marionette=true, name=01 Game, browserName=chrome, javascriptEnabled=true, platform=ANY}]])
-19:20:29.121 INFO - Creating a new session for Capabilities [{acceptSslCerts=true, marionette=true, name=01 Game, browserName=chrome, javascriptEnabled=true, platform=ANY}]
-Starting ChromeDriver 2.30.477700 (0057494ad8732195794a7b32078424f92a5fce41) on port 42421
+2017-06-29 20:04:14.673:INFO:osjs.Server:main: jetty-9.2.20.v20161216
+2017-06-29 20:04:14.707:INFO:osjsh.ContextHandler:main: Started o.s.j.s.ServletContextHandler@685cb137{/,null,AVAILABLE}
+2017-06-29 20:04:14.858:INFO:osjs.AbstractConnector:main: Started ServerConnector@49993335{HTTP/1.1,[http/1.1]}{0.0.0.0:4444}
+2017-06-29 20:04:14.859:INFO:osjs.Server:main: Started @616ms
+20:04:14.859 INFO - Selenium Server is up and running
+20:04:16.010 INFO - SessionCleaner initialized with insideBrowserTimeout 0 and clientGoneTimeout 1800000 polling every 180000
+20:04:16.038 INFO - Executing: [new session: Capabilities [{acceptSslCerts=true, name=01 Game, browserName=chrome, javascriptEnabled=true, chromeOptions={args=[Mozilla/5.0 (iPhone; CPU iPhone OS 5_0 like Mac OS X) AppleWebKit/534.46
+            (KHTML, like Gecko) Version/5.1 Mobile/9A334 Safari/7534.48.3, --window-size=640,1136]}, platform=ANY}]])
+20:04:16.047 INFO - Creating a new session for Capabilities [{acceptSslCerts=true, name=01 Game, browserName=chrome, javascriptEnabled=true, chromeOptions={args=[Mozilla/5.0 (iPhone; CPU iPhone OS 5_0 like Mac OS X) AppleWebKit/534.46
+            (KHTML, like Gecko) Version/5.1 Mobile/9A334 Safari/7534.48.3, --window-size=640,1136]}, platform=ANY}]
+Starting ChromeDriver 2.30.477700 (0057494ad8732195794a7b32078424f92a5fce41) on port 9083
 Only local connections are allowed.
-19:20:31.409 INFO - Detected dialect: OSS
-19:20:31.425 INFO - Done: [new session: Capabilities [{acceptSslCerts=true, marionette=true, name=01 Game, browserName=chrome, javascriptEnabled=true, platform=ANY}]]
-19:20:31.452 INFO - Executing: [get: http://localhost:3000])
-19:20:32.182 INFO - Done: [get: http://localhost:3000]
-19:20:33.192 INFO - Executing: [get title])
-19:20:33.202 INFO - Done: [get title]
-19:20:33.215 INFO - Executing: [find element: By.cssSelector: input.form-control])
-19:20:33.246 INFO - Done: [find element: By.cssSelector: input.form-control]
-19:20:33.253 INFO - Executing: [click: 0 [[ChromeDriver: chrome on XP (2460aa12df7f31888fd691f2a8dd18e6)] -> css selector: input.form-control]])
-19:20:33.318 INFO - Done: [click: 0 [[ChromeDriver: chrome on XP (2460aa12df7f31888fd691f2a8dd18e6)] -> css selector: input.form-control]]
-19:20:33.324 INFO - Executing: [send keys to active: [5]])
-19:20:33.338 INFO - Done: [send keys to active: [5]]
-19:20:33.346 INFO - Executing: [find element: By.cssSelector: button.btn.btn-default])
-19:20:33.371 INFO - Done: [find element: By.cssSelector: button.btn.btn-default]
-19:20:33.376 INFO - Executing: [click: 1 [[ChromeDriver: chrome on XP (2460aa12df7f31888fd691f2a8dd18e6)] -> css selector: button.btn.btn-default]])
-19:20:33.441 INFO - Done: [click: 1 [[ChromeDriver: chrome on XP (2460aa12df7f31888fd691f2a8dd18e6)] -> css selector: button.btn.btn-default]]
-19:20:34.448 INFO - Executing: [find element: By.cssSelector: span.guess-span])
-19:20:34.470 INFO - Done: [find element: By.cssSelector: span.guess-span]
-19:20:34.475 INFO - Executing: [get text: 2 [[ChromeDriver: chrome on XP (2460aa12df7f31888fd691f2a8dd18e6)] -> css selector: span.guess-span]])
-19:20:34.499 INFO - Done: [get text: 2 [[ChromeDriver: chrome on XP (2460aa12df7f31888fd691f2a8dd18e6)] -> css selector: span.guess-span]]
-19:20:34.506 INFO - Executing: [find element: By.cssSelector: ul.guess-list li])
-19:20:34.530 INFO - Done: [find element: By.cssSelector: ul.guess-list li]
-19:20:34.534 INFO - Executing: [get text: 3 [[ChromeDriver: chrome on XP (2460aa12df7f31888fd691f2a8dd18e6)] -> css selector: ul.guess-list li]])
-19:20:34.561 INFO - Done: [get text: 3 [[ChromeDriver: chrome on XP (2460aa12df7f31888fd691f2a8dd18e6)] -> css selector: ul.guess-list li]]
-19:20:34.569 INFO - Executing: [find element: By.cssSelector: p.feedback-text])
-19:20:34.589 INFO - Done: [find element: By.cssSelector: p.feedback-text]
-19:20:34.594 INFO - Executing: [get text: 4 [[ChromeDriver: chrome on XP (2460aa12df7f31888fd691f2a8dd18e6)] -> css selector: p.feedback-text]])
-19:20:34.617 INFO - Done: [get text: 4 [[ChromeDriver: chrome on XP (2460aa12df7f31888fd691f2a8dd18e6)] -> css selector: p.feedback-text]]
-19:20:34.623 INFO - Executing: [find element: By.cssSelector: p.feedback-text])
-19:20:34.634 INFO - Done: [find element: By.cssSelector: p.feedback-text]
-19:20:34.637 INFO - Executing: [get text: 4 [[ChromeDriver: chrome on XP (2460aa12df7f31888fd691f2a8dd18e6)] -> css selector: p.feedback-text]])
-19:20:34.648 INFO - Done: [get text: 4 [[ChromeDriver: chrome on XP (2460aa12df7f31888fd691f2a8dd18e6)] -> css selector: p.feedback-text]]
-19:20:34.656 INFO - Executing: [find element: By.cssSelector: input.form-control])
-19:20:34.664 INFO - Done: [find element: By.cssSelector: input.form-control]
-19:20:34.668 INFO - Executing: [click: 0 [[ChromeDriver: chrome on XP (2460aa12df7f31888fd691f2a8dd18e6)] -> css selector: input.form-control]])
-19:20:34.700 INFO - Done: [click: 0 [[ChromeDriver: chrome on XP (2460aa12df7f31888fd691f2a8dd18e6)] -> css selector: input.form-control]]
-19:20:34.703 INFO - Executing: [send keys to active: [50]])
-19:20:34.721 INFO - Done: [send keys to active: [50]]
-19:20:34.725 INFO - Executing: [find element: By.cssSelector: button.btn.btn-default])
-19:20:34.734 INFO - Done: [find element: By.cssSelector: button.btn.btn-default]
-19:20:34.738 INFO - Executing: [click: 1 [[ChromeDriver: chrome on XP (2460aa12df7f31888fd691f2a8dd18e6)] -> css selector: button.btn.btn-default]])
-19:20:34.768 INFO - Done: [click: 1 [[ChromeDriver: chrome on XP (2460aa12df7f31888fd691f2a8dd18e6)] -> css selector: button.btn.btn-default]]
-19:20:35.774 INFO - Executing: [find element: By.cssSelector: span.guess-span])
-19:20:35.787 INFO - Done: [find element: By.cssSelector: span.guess-span]
-19:20:35.791 INFO - Executing: [get text: 2 [[ChromeDriver: chrome on XP (2460aa12df7f31888fd691f2a8dd18e6)] -> css selector: span.guess-span]])
-19:20:35.801 INFO - Done: [get text: 2 [[ChromeDriver: chrome on XP (2460aa12df7f31888fd691f2a8dd18e6)] -> css selector: span.guess-span]]
-19:20:35.805 INFO - Executing: [find element: By.cssSelector: ul.guess-list li])
-19:20:35.814 INFO - Done: [find element: By.cssSelector: ul.guess-list li]
-19:20:35.817 INFO - Executing: [get text: 3 [[ChromeDriver: chrome on XP (2460aa12df7f31888fd691f2a8dd18e6)] -> css selector: ul.guess-list li]])
-19:20:35.826 INFO - Done: [get text: 3 [[ChromeDriver: chrome on XP (2460aa12df7f31888fd691f2a8dd18e6)] -> css selector: ul.guess-list li]]
-19:20:35.832 INFO - Executing: [find element: By.cssSelector: p.feedback-text])
-19:20:35.841 INFO - Done: [find element: By.cssSelector: p.feedback-text]
-19:20:35.845 INFO - Executing: [get text: 4 [[ChromeDriver: chrome on XP (2460aa12df7f31888fd691f2a8dd18e6)] -> css selector: p.feedback-text]])
-19:20:35.855 INFO - Done: [get text: 4 [[ChromeDriver: chrome on XP (2460aa12df7f31888fd691f2a8dd18e6)] -> css selector: p.feedback-text]]
-19:20:35.860 INFO - Executing: [find element: By.cssSelector: p.feedback-text])
-19:20:35.871 INFO - Done: [find element: By.cssSelector: p.feedback-text]
-19:20:35.875 INFO - Executing: [get text: 4 [[ChromeDriver: chrome on XP (2460aa12df7f31888fd691f2a8dd18e6)] -> css selector: p.feedback-text]])
-19:20:35.886 INFO - Done: [get text: 4 [[ChromeDriver: chrome on XP (2460aa12df7f31888fd691f2a8dd18e6)] -> css selector: p.feedback-text]]
-19:20:35.899 INFO - Executing: [find element: By.cssSelector: input.form-control])
-19:20:35.913 INFO - Done: [find element: By.cssSelector: input.form-control]
-19:20:35.916 INFO - Executing: [click: 0 [[ChromeDriver: chrome on XP (2460aa12df7f31888fd691f2a8dd18e6)] -> css selector: input.form-control]])
-19:20:35.947 INFO - Done: [click: 0 [[ChromeDriver: chrome on XP (2460aa12df7f31888fd691f2a8dd18e6)] -> css selector: input.form-control]]
-19:20:35.950 INFO - Executing: [send keys to active: [5]])
-19:20:35.961 INFO - Done: [send keys to active: [5]]
-19:20:35.965 INFO - Executing: [find element: By.cssSelector: button.playingButton])
-19:20:35.984 INFO - Done: [find element: By.cssSelector: button.playingButton]
-19:20:35.987 INFO - Executing: [click: 1 [[ChromeDriver: chrome on XP (2460aa12df7f31888fd691f2a8dd18e6)] -> css selector: button.btn.btn-default]])
-19:20:36.016 INFO - Done: [click: 1 [[ChromeDriver: chrome on XP (2460aa12df7f31888fd691f2a8dd18e6)] -> css selector: button.btn.btn-default]]
-19:20:36.322 INFO - Executing: [find element: By.cssSelector: input.form-control])
-19:20:36.332 INFO - Done: [find element: By.cssSelector: input.form-control]
-19:20:36.335 INFO - Executing: [click: 0 [[ChromeDriver: chrome on XP (2460aa12df7f31888fd691f2a8dd18e6)] -> css selector: input.form-control]])
-19:20:36.365 INFO - Done: [click: 0 [[ChromeDriver: chrome on XP (2460aa12df7f31888fd691f2a8dd18e6)] -> css selector: input.form-control]]
-19:20:36.369 INFO - Executing: [send keys to active: [5]])
-19:20:36.382 INFO - Done: [send keys to active: [5]]
-19:20:36.386 INFO - Executing: [find element: By.cssSelector: button.playingButton])
-19:20:36.398 INFO - Done: [find element: By.cssSelector: button.playingButton]
-19:20:36.401 INFO - Executing: [click: 1 [[ChromeDriver: chrome on XP (2460aa12df7f31888fd691f2a8dd18e6)] -> css selector: button.btn.btn-default]])
-19:20:36.435 INFO - Done: [click: 1 [[ChromeDriver: chrome on XP (2460aa12df7f31888fd691f2a8dd18e6)] -> css selector: button.btn.btn-default]]
-19:20:36.740 INFO - Executing: [find element: By.cssSelector: input.form-control])
-19:20:36.752 INFO - Done: [find element: By.cssSelector: input.form-control]
-19:20:36.755 INFO - Executing: [click: 0 [[ChromeDriver: chrome on XP (2460aa12df7f31888fd691f2a8dd18e6)] -> css selector: input.form-control]])
-19:20:36.785 INFO - Done: [click: 0 [[ChromeDriver: chrome on XP (2460aa12df7f31888fd691f2a8dd18e6)] -> css selector: input.form-control]]
-19:20:36.790 INFO - Executing: [send keys to active: [5]])
-19:20:36.801 INFO - Done: [send keys to active: [5]]
-19:20:36.805 INFO - Executing: [find element: By.cssSelector: button.playingButton])
-19:20:36.817 INFO - Done: [find element: By.cssSelector: button.playingButton]
-19:20:36.820 INFO - Executing: [click: 1 [[ChromeDriver: chrome on XP (2460aa12df7f31888fd691f2a8dd18e6)] -> css selector: button.btn.btn-default]])
-19:20:36.849 INFO - Done: [click: 1 [[ChromeDriver: chrome on XP (2460aa12df7f31888fd691f2a8dd18e6)] -> css selector: button.btn.btn-default]]
-19:20:37.155 INFO - Executing: [find element: By.cssSelector: input.form-control])
-19:20:37.165 INFO - Done: [find element: By.cssSelector: input.form-control]
-19:20:37.169 INFO - Executing: [click: 0 [[ChromeDriver: chrome on XP (2460aa12df7f31888fd691f2a8dd18e6)] -> css selector: input.form-control]])
-19:20:37.200 INFO - Done: [click: 0 [[ChromeDriver: chrome on XP (2460aa12df7f31888fd691f2a8dd18e6)] -> css selector: input.form-control]]
-19:20:37.204 INFO - Executing: [send keys to active: [5]])
-19:20:37.215 INFO - Done: [send keys to active: [5]]
-19:20:37.219 INFO - Executing: [find element: By.cssSelector: button.playingButton])
-19:20:37.229 INFO - Done: [find element: By.cssSelector: button.playingButton]
-19:20:37.232 INFO - Executing: [click: 1 [[ChromeDriver: chrome on XP (2460aa12df7f31888fd691f2a8dd18e6)] -> css selector: button.btn.btn-default]])
-19:20:37.269 INFO - Done: [click: 1 [[ChromeDriver: chrome on XP (2460aa12df7f31888fd691f2a8dd18e6)] -> css selector: button.btn.btn-default]]
-19:20:37.574 INFO - Executing: [find element: By.cssSelector: input.form-control])
-19:20:37.585 INFO - Done: [find element: By.cssSelector: input.form-control]
-19:20:37.589 INFO - Executing: [click: 0 [[ChromeDriver: chrome on XP (2460aa12df7f31888fd691f2a8dd18e6)] -> css selector: input.form-control]])
-19:20:37.618 INFO - Done: [click: 0 [[ChromeDriver: chrome on XP (2460aa12df7f31888fd691f2a8dd18e6)] -> css selector: input.form-control]]
-19:20:37.621 INFO - Executing: [send keys to active: [5]])
-19:20:37.632 INFO - Done: [send keys to active: [5]]
-19:20:37.636 INFO - Executing: [find element: By.cssSelector: button.playingButton])
-19:20:37.647 INFO - Done: [find element: By.cssSelector: button.playingButton]
-19:20:37.650 INFO - Executing: [click: 1 [[ChromeDriver: chrome on XP (2460aa12df7f31888fd691f2a8dd18e6)] -> css selector: button.btn.btn-default]])
-19:20:37.683 INFO - Done: [click: 1 [[ChromeDriver: chrome on XP (2460aa12df7f31888fd691f2a8dd18e6)] -> css selector: button.btn.btn-default]]
-19:20:37.988 INFO - Executing: [find element: By.cssSelector: input.form-control])
-19:20:37.998 INFO - Done: [find element: By.cssSelector: input.form-control]
-19:20:38.001 INFO - Executing: [click: 0 [[ChromeDriver: chrome on XP (2460aa12df7f31888fd691f2a8dd18e6)] -> css selector: input.form-control]])
-19:20:38.033 INFO - Done: [click: 0 [[ChromeDriver: chrome on XP (2460aa12df7f31888fd691f2a8dd18e6)] -> css selector: input.form-control]]
-19:20:38.037 INFO - Executing: [send keys to active: [5]])
-19:20:38.052 INFO - Done: [send keys to active: [5]]
-19:20:38.055 INFO - Executing: [find element: By.cssSelector: button.playingButton])
-19:20:38.066 INFO - Done: [find element: By.cssSelector: button.playingButton]
-19:20:38.069 INFO - Executing: [click: 1 [[ChromeDriver: chrome on XP (2460aa12df7f31888fd691f2a8dd18e6)] -> css selector: button.btn.btn-default]])
-19:20:38.102 INFO - Done: [click: 1 [[ChromeDriver: chrome on XP (2460aa12df7f31888fd691f2a8dd18e6)] -> css selector: button.btn.btn-default]]
-19:20:38.407 INFO - Executing: [find element: By.cssSelector: input.form-control])
-19:20:38.418 INFO - Done: [find element: By.cssSelector: input.form-control]
-19:20:38.421 INFO - Executing: [click: 0 [[ChromeDriver: chrome on XP (2460aa12df7f31888fd691f2a8dd18e6)] -> css selector: input.form-control]])
-19:20:38.450 INFO - Done: [click: 0 [[ChromeDriver: chrome on XP (2460aa12df7f31888fd691f2a8dd18e6)] -> css selector: input.form-control]]
-19:20:38.454 INFO - Executing: [send keys to active: [5]])
-19:20:38.465 INFO - Done: [send keys to active: [5]]
-19:20:38.468 INFO - Executing: [find element: By.cssSelector: button.playingButton])
-19:20:38.478 INFO - Done: [find element: By.cssSelector: button.playingButton]
-19:20:38.481 INFO - Executing: [click: 1 [[ChromeDriver: chrome on XP (2460aa12df7f31888fd691f2a8dd18e6)] -> css selector: button.btn.btn-default]])
-19:20:38.512 INFO - Done: [click: 1 [[ChromeDriver: chrome on XP (2460aa12df7f31888fd691f2a8dd18e6)] -> css selector: button.btn.btn-default]]
-19:20:38.817 INFO - Executing: [find element: By.cssSelector: input.form-control])
-19:20:38.828 INFO - Done: [find element: By.cssSelector: input.form-control]
-19:20:38.832 INFO - Executing: [click: 0 [[ChromeDriver: chrome on XP (2460aa12df7f31888fd691f2a8dd18e6)] -> css selector: input.form-control]])
-19:20:38.865 INFO - Done: [click: 0 [[ChromeDriver: chrome on XP (2460aa12df7f31888fd691f2a8dd18e6)] -> css selector: input.form-control]]
-19:20:38.869 INFO - Executing: [send keys to active: [5]])
-19:20:38.879 INFO - Done: [send keys to active: [5]]
-19:20:38.882 INFO - Executing: [find element: By.cssSelector: button.playingButton])
-19:20:38.892 INFO - Done: [find element: By.cssSelector: button.playingButton]
-19:20:38.895 INFO - Executing: [click: 1 [[ChromeDriver: chrome on XP (2460aa12df7f31888fd691f2a8dd18e6)] -> css selector: button.btn.btn-default]])
-19:20:38.926 INFO - Done: [click: 1 [[ChromeDriver: chrome on XP (2460aa12df7f31888fd691f2a8dd18e6)] -> css selector: button.btn.btn-default]]
-19:20:39.230 INFO - Executing: [find element: By.cssSelector: input.form-control])
-19:20:39.240 INFO - Done: [find element: By.cssSelector: input.form-control]
-19:20:39.245 INFO - Executing: [click: 0 [[ChromeDriver: chrome on XP (2460aa12df7f31888fd691f2a8dd18e6)] -> css selector: input.form-control]])
-19:20:39.275 INFO - Done: [click: 0 [[ChromeDriver: chrome on XP (2460aa12df7f31888fd691f2a8dd18e6)] -> css selector: input.form-control]]
-19:20:39.279 INFO - Executing: [send keys to active: [5]])
-19:20:39.290 INFO - Done: [send keys to active: [5]]
-19:20:39.294 INFO - Executing: [find element: By.cssSelector: button.playingButton])
-19:20:39.303 INFO - Done: [find element: By.cssSelector: button.playingButton]
-19:20:39.307 INFO - Executing: [click: 1 [[ChromeDriver: chrome on XP (2460aa12df7f31888fd691f2a8dd18e6)] -> css selector: button.btn.btn-default]])
-19:20:39.340 INFO - Done: [click: 1 [[ChromeDriver: chrome on XP (2460aa12df7f31888fd691f2a8dd18e6)] -> css selector: button.btn.btn-default]]
-19:20:39.645 INFO - Executing: [find element: By.cssSelector: input.form-control])
-19:20:39.655 INFO - Done: [find element: By.cssSelector: input.form-control]
-19:20:39.660 INFO - Executing: [click: 0 [[ChromeDriver: chrome on XP (2460aa12df7f31888fd691f2a8dd18e6)] -> css selector: input.form-control]])
-19:20:39.690 INFO - Done: [click: 0 [[ChromeDriver: chrome on XP (2460aa12df7f31888fd691f2a8dd18e6)] -> css selector: input.form-control]]
-19:20:39.697 INFO - Executing: [send keys to active: [5]])
-19:20:39.709 INFO - Done: [send keys to active: [5]]
-19:20:39.712 INFO - Executing: [find element: By.cssSelector: button.playingButton])
-19:20:39.723 INFO - Done: [find element: By.cssSelector: button.playingButton]
-19:20:39.726 INFO - Executing: [click: 1 [[ChromeDriver: chrome on XP (2460aa12df7f31888fd691f2a8dd18e6)] -> css selector: button.btn.btn-default]])
-19:20:39.759 INFO - Done: [click: 1 [[ChromeDriver: chrome on XP (2460aa12df7f31888fd691f2a8dd18e6)] -> css selector: button.btn.btn-default]]
-19:20:40.064 INFO - Executing: [find element: By.cssSelector: input.form-control])
-19:20:40.073 INFO - Done: [find element: By.cssSelector: input.form-control]
-19:20:40.077 INFO - Executing: [click: 0 [[ChromeDriver: chrome on XP (2460aa12df7f31888fd691f2a8dd18e6)] -> css selector: input.form-control]])
-19:20:40.104 INFO - Done: [click: 0 [[ChromeDriver: chrome on XP (2460aa12df7f31888fd691f2a8dd18e6)] -> css selector: input.form-control]]
-19:20:40.107 INFO - Executing: [send keys to active: [5]])
-19:20:40.116 INFO - Done: [send keys to active: [5]]
-19:20:40.120 INFO - Executing: [find element: By.cssSelector: button.playingButton])
-19:20:40.130 INFO - Done: [find element: By.cssSelector: button.playingButton]
-19:20:40.133 INFO - Executing: [click: 1 [[ChromeDriver: chrome on XP (2460aa12df7f31888fd691f2a8dd18e6)] -> css selector: button.btn.btn-default]])
-19:20:40.161 INFO - Done: [click: 1 [[ChromeDriver: chrome on XP (2460aa12df7f31888fd691f2a8dd18e6)] -> css selector: button.btn.btn-default]]
-19:20:40.466 INFO - Executing: [find element: By.cssSelector: input.form-control])
-19:20:40.476 INFO - Done: [find element: By.cssSelector: input.form-control]
-19:20:40.480 INFO - Executing: [click: 0 [[ChromeDriver: chrome on XP (2460aa12df7f31888fd691f2a8dd18e6)] -> css selector: input.form-control]])
-19:20:40.512 INFO - Done: [click: 0 [[ChromeDriver: chrome on XP (2460aa12df7f31888fd691f2a8dd18e6)] -> css selector: input.form-control]]
-19:20:40.515 INFO - Executing: [send keys to active: [5]])
-19:20:40.529 INFO - Done: [send keys to active: [5]]
-19:20:40.532 INFO - Executing: [find element: By.cssSelector: button.playingButton])
-19:20:40.542 INFO - Done: [find element: By.cssSelector: button.playingButton]
-19:20:40.545 INFO - Executing: [click: 1 [[ChromeDriver: chrome on XP (2460aa12df7f31888fd691f2a8dd18e6)] -> css selector: button.btn.btn-default]])
-19:20:40.577 INFO - Done: [click: 1 [[ChromeDriver: chrome on XP (2460aa12df7f31888fd691f2a8dd18e6)] -> css selector: button.btn.btn-default]]
-19:20:40.881 INFO - Executing: [find element: By.cssSelector: input.form-control])
-19:20:40.891 INFO - Done: [find element: By.cssSelector: input.form-control]
-19:20:40.895 INFO - Executing: [click: 0 [[ChromeDriver: chrome on XP (2460aa12df7f31888fd691f2a8dd18e6)] -> css selector: input.form-control]])
-19:20:40.926 INFO - Done: [click: 0 [[ChromeDriver: chrome on XP (2460aa12df7f31888fd691f2a8dd18e6)] -> css selector: input.form-control]]
-19:20:40.929 INFO - Executing: [send keys to active: [5]])
-19:20:40.937 INFO - Done: [send keys to active: [5]]
-19:20:40.940 INFO - Executing: [find element: By.cssSelector: button.playingButton])
-19:20:40.949 INFO - Done: [find element: By.cssSelector: button.playingButton]
-19:20:40.952 INFO - Executing: [click: 1 [[ChromeDriver: chrome on XP (2460aa12df7f31888fd691f2a8dd18e6)] -> css selector: button.btn.btn-default]])
-19:20:40.984 INFO - Done: [click: 1 [[ChromeDriver: chrome on XP (2460aa12df7f31888fd691f2a8dd18e6)] -> css selector: button.btn.btn-default]]
-19:20:41.288 INFO - Executing: [find element: By.cssSelector: input.form-control])
-19:20:41.299 INFO - Done: [find element: By.cssSelector: input.form-control]
-19:20:41.302 INFO - Executing: [click: 0 [[ChromeDriver: chrome on XP (2460aa12df7f31888fd691f2a8dd18e6)] -> css selector: input.form-control]])
-19:20:41.332 INFO - Done: [click: 0 [[ChromeDriver: chrome on XP (2460aa12df7f31888fd691f2a8dd18e6)] -> css selector: input.form-control]]
-19:20:41.336 INFO - Executing: [send keys to active: [5]])
-19:20:41.348 INFO - Done: [send keys to active: [5]]
-19:20:41.351 INFO - Executing: [find element: By.cssSelector: button.playingButton])
-19:20:41.360 INFO - Done: [find element: By.cssSelector: button.playingButton]
-19:20:41.365 INFO - Executing: [click: 1 [[ChromeDriver: chrome on XP (2460aa12df7f31888fd691f2a8dd18e6)] -> css selector: button.btn.btn-default]])
-19:20:41.399 INFO - Done: [click: 1 [[ChromeDriver: chrome on XP (2460aa12df7f31888fd691f2a8dd18e6)] -> css selector: button.btn.btn-default]]
-19:20:41.704 INFO - Executing: [find element: By.cssSelector: input.form-control])
-19:20:41.714 INFO - Done: [find element: By.cssSelector: input.form-control]
-19:20:41.717 INFO - Executing: [click: 0 [[ChromeDriver: chrome on XP (2460aa12df7f31888fd691f2a8dd18e6)] -> css selector: input.form-control]])
-19:20:41.745 INFO - Done: [click: 0 [[ChromeDriver: chrome on XP (2460aa12df7f31888fd691f2a8dd18e6)] -> css selector: input.form-control]]
-19:20:41.748 INFO - Executing: [send keys to active: [5]])
-19:20:41.756 INFO - Done: [send keys to active: [5]]
-19:20:41.762 INFO - Executing: [find element: By.cssSelector: button.playingButton])
-19:20:41.771 INFO - Done: [find element: By.cssSelector: button.playingButton]
-19:20:41.774 INFO - Executing: [click: 1 [[ChromeDriver: chrome on XP (2460aa12df7f31888fd691f2a8dd18e6)] -> css selector: button.btn.btn-default]])
-19:20:41.809 INFO - Done: [click: 1 [[ChromeDriver: chrome on XP (2460aa12df7f31888fd691f2a8dd18e6)] -> css selector: button.btn.btn-default]]
-19:20:42.113 INFO - Executing: [find element: By.cssSelector: input.form-control])
-19:20:42.123 INFO - Done: [find element: By.cssSelector: input.form-control]
-19:20:42.126 INFO - Executing: [click: 0 [[ChromeDriver: chrome on XP (2460aa12df7f31888fd691f2a8dd18e6)] -> css selector: input.form-control]])
-19:20:42.155 INFO - Done: [click: 0 [[ChromeDriver: chrome on XP (2460aa12df7f31888fd691f2a8dd18e6)] -> css selector: input.form-control]]
-19:20:42.160 INFO - Executing: [send keys to active: [5]])
-19:20:42.170 INFO - Done: [send keys to active: [5]]
-19:20:42.174 INFO - Executing: [find element: By.cssSelector: button.playingButton])
-19:20:42.184 INFO - Done: [find element: By.cssSelector: button.playingButton]
-19:20:42.187 INFO - Executing: [click: 1 [[ChromeDriver: chrome on XP (2460aa12df7f31888fd691f2a8dd18e6)] -> css selector: button.btn.btn-default]])
-19:20:42.218 INFO - Done: [click: 1 [[ChromeDriver: chrome on XP (2460aa12df7f31888fd691f2a8dd18e6)] -> css selector: button.btn.btn-default]]
-19:20:42.521 INFO - Executing: [find element: By.cssSelector: input.form-control])
-19:20:42.531 INFO - Done: [find element: By.cssSelector: input.form-control]
-19:20:42.534 INFO - Executing: [click: 0 [[ChromeDriver: chrome on XP (2460aa12df7f31888fd691f2a8dd18e6)] -> css selector: input.form-control]])
-19:20:42.562 INFO - Done: [click: 0 [[ChromeDriver: chrome on XP (2460aa12df7f31888fd691f2a8dd18e6)] -> css selector: input.form-control]]
-19:20:42.564 INFO - Executing: [send keys to active: [5]])
-19:20:42.576 INFO - Done: [send keys to active: [5]]
-19:20:42.579 INFO - Executing: [find element: By.cssSelector: button.playingButton])
-19:20:42.588 INFO - Done: [find element: By.cssSelector: button.playingButton]
-19:20:42.591 INFO - Executing: [click: 1 [[ChromeDriver: chrome on XP (2460aa12df7f31888fd691f2a8dd18e6)] -> css selector: button.btn.btn-default]])
-19:20:42.624 INFO - Done: [click: 1 [[ChromeDriver: chrome on XP (2460aa12df7f31888fd691f2a8dd18e6)] -> css selector: button.btn.btn-default]]
-19:20:42.928 INFO - Executing: [find element: By.cssSelector: input.form-control])
-19:20:42.939 INFO - Done: [find element: By.cssSelector: input.form-control]
-19:20:42.944 INFO - Executing: [click: 0 [[ChromeDriver: chrome on XP (2460aa12df7f31888fd691f2a8dd18e6)] -> css selector: input.form-control]])
-19:20:42.973 INFO - Done: [click: 0 [[ChromeDriver: chrome on XP (2460aa12df7f31888fd691f2a8dd18e6)] -> css selector: input.form-control]]
-19:20:42.977 INFO - Executing: [send keys to active: [5]])
-19:20:42.988 INFO - Done: [send keys to active: [5]]
-19:20:42.991 INFO - Executing: [find element: By.cssSelector: button.playingButton])
-19:20:43.001 INFO - Done: [find element: By.cssSelector: button.playingButton]
-19:20:43.003 INFO - Executing: [click: 1 [[ChromeDriver: chrome on XP (2460aa12df7f31888fd691f2a8dd18e6)] -> css selector: button.btn.btn-default]])
-19:20:43.030 INFO - Done: [click: 1 [[ChromeDriver: chrome on XP (2460aa12df7f31888fd691f2a8dd18e6)] -> css selector: button.btn.btn-default]]
-19:20:43.334 INFO - Executing: [find element: By.cssSelector: span.guess-span])
-19:20:43.347 INFO - Done: [find element: By.cssSelector: span.guess-span]
-19:20:43.349 INFO - Executing: [get text: 2 [[ChromeDriver: chrome on XP (2460aa12df7f31888fd691f2a8dd18e6)] -> css selector: span.guess-span]])
-19:20:43.361 INFO - Done: [get text: 2 [[ChromeDriver: chrome on XP (2460aa12df7f31888fd691f2a8dd18e6)] -> css selector: span.guess-span]]
-19:20:43.369 INFO - Executing: [find elements: By.cssSelector: button.playingButton])
-19:20:43.392 INFO - Done: [find elements: By.cssSelector: button.playingButton]
-19:20:43.401 INFO - Executing: [find element: By.cssSelector: ul li a])
-19:20:43.422 INFO - Done: [find element: By.cssSelector: ul li a]
-19:20:43.425 INFO - Executing: [click: 5 [[ChromeDriver: chrome on XP (2460aa12df7f31888fd691f2a8dd18e6)] -> css selector: ul li a]])
-19:20:43.652 INFO - Done: [click: 5 [[ChromeDriver: chrome on XP (2460aa12df7f31888fd691f2a8dd18e6)] -> css selector: ul li a]]
-19:20:43.658 INFO - Executing: [find element: By.cssSelector: span.guess-span])
-19:20:43.673 INFO - Done: [find element: By.cssSelector: span.guess-span]
-19:20:43.676 INFO - Executing: [get text: 6 [[ChromeDriver: chrome on XP (2460aa12df7f31888fd691f2a8dd18e6)] -> css selector: span.guess-span]])
-19:20:43.708 INFO - Done: [get text: 6 [[ChromeDriver: chrome on XP (2460aa12df7f31888fd691f2a8dd18e6)] -> css selector: span.guess-span]]
-19:20:43.716 INFO - Executing: [delete session: 181be6d8-e090-418b-bca3-d70fb42f5fde])
-19:20:44.666 INFO - Done: [delete session: 181be6d8-e090-418b-bca3-d70fb42f5fde]
+20:04:18.823 INFO - Detected dialect: OSS
+20:04:18.854 INFO - Done: [new session: Capabilities [{acceptSslCerts=true, name=01 Game, browserName=chrome, javascriptEnabled=true, chromeOptions={args=[Mozilla/5.0 (iPhone; CPU iPhone OS 5_0 like Mac OS X) AppleWebKit/534.46
+            (KHTML, like Gecko) Version/5.1 Mobile/9A334 Safari/7534.48.3, --window-size=640,1136]}, platform=ANY}]]
+20:04:18.882 INFO - Executing: [get: http://localhost:3000])
+20:04:21.048 INFO - Done: [get: http://localhost:3000]
+20:04:22.057 INFO - Executing: [get title])
+20:04:22.067 INFO - Done: [get title]
+20:04:22.078 INFO - Executing: [find element: By.cssSelector: input.form-control])
+20:04:22.113 INFO - Done: [find element: By.cssSelector: input.form-control]
+20:04:22.118 INFO - Executing: [click: 0 [[ChromeDriver: chrome on XP (842404bae38e1a5aabae5e3a243f1eaf)] -> css selector: input.form-control]])
+20:04:22.199 INFO - Done: [click: 0 [[ChromeDriver: chrome on XP (842404bae38e1a5aabae5e3a243f1eaf)] -> css selector: input.form-control]]
+20:04:22.204 INFO - Executing: [send keys to active: [5]])
+20:04:22.220 INFO - Done: [send keys to active: [5]]
+20:04:22.228 INFO - Executing: [find element: By.cssSelector: button.btn.btn-default])
+20:04:22.262 INFO - Done: [find element: By.cssSelector: button.btn.btn-default]
+20:04:22.267 INFO - Executing: [click: 1 [[ChromeDriver: chrome on XP (842404bae38e1a5aabae5e3a243f1eaf)] -> css selector: button.btn.btn-default]])
+20:04:22.420 INFO - Done: [click: 1 [[ChromeDriver: chrome on XP (842404bae38e1a5aabae5e3a243f1eaf)] -> css selector: button.btn.btn-default]]
+20:04:23.428 INFO - Executing: [find element: By.cssSelector: span.guess-span])
+20:04:23.483 INFO - Done: [find element: By.cssSelector: span.guess-span]
+20:04:23.487 INFO - Executing: [get text: 2 [[ChromeDriver: chrome on XP (842404bae38e1a5aabae5e3a243f1eaf)] -> css selector: span.guess-span]])
+20:04:23.542 INFO - Done: [get text: 2 [[ChromeDriver: chrome on XP (842404bae38e1a5aabae5e3a243f1eaf)] -> css selector: span.guess-span]]
+20:04:23.548 INFO - Executing: [find element: By.cssSelector: ul.guess-list li])
+20:04:23.616 INFO - Done: [find element: By.cssSelector: ul.guess-list li]
+20:04:23.620 INFO - Executing: [get text: 3 [[ChromeDriver: chrome on XP (842404bae38e1a5aabae5e3a243f1eaf)] -> css selector: ul.guess-list li]])
+20:04:23.652 INFO - Done: [get text: 3 [[ChromeDriver: chrome on XP (842404bae38e1a5aabae5e3a243f1eaf)] -> css selector: ul.guess-list li]]
+20:04:23.657 INFO - Executing: [find element: By.cssSelector: p.feedback-text])
+20:04:23.723 INFO - Done: [find element: By.cssSelector: p.feedback-text]
+20:04:23.730 INFO - Executing: [get text: 4 [[ChromeDriver: chrome on XP (842404bae38e1a5aabae5e3a243f1eaf)] -> css selector: p.feedback-text]])
+20:04:23.785 INFO - Done: [get text: 4 [[ChromeDriver: chrome on XP (842404bae38e1a5aabae5e3a243f1eaf)] -> css selector: p.feedback-text]]
+20:04:23.793 INFO - Executing: [find element: By.cssSelector: p.feedback-text])
+20:04:23.871 INFO - Done: [find element: By.cssSelector: p.feedback-text]
+20:04:23.877 INFO - Executing: [get text: 4 [[ChromeDriver: chrome on XP (842404bae38e1a5aabae5e3a243f1eaf)] -> css selector: p.feedback-text]])
+20:04:23.889 INFO - Done: [get text: 4 [[ChromeDriver: chrome on XP (842404bae38e1a5aabae5e3a243f1eaf)] -> css selector: p.feedback-text]]
+20:04:23.897 INFO - Executing: [find element: By.cssSelector: input.form-control])
+20:04:23.908 INFO - Done: [find element: By.cssSelector: input.form-control]
+20:04:23.911 INFO - Executing: [click: 0 [[ChromeDriver: chrome on XP (842404bae38e1a5aabae5e3a243f1eaf)] -> css selector: input.form-control]])
+20:04:23.967 INFO - Done: [click: 0 [[ChromeDriver: chrome on XP (842404bae38e1a5aabae5e3a243f1eaf)] -> css selector: input.form-control]]
+20:04:23.972 INFO - Executing: [send keys to active: [50]])
+20:04:23.985 INFO - Done: [send keys to active: [50]]
+20:04:23.990 INFO - Executing: [find element: By.cssSelector: button.btn.btn-default])
+20:04:23.999 INFO - Done: [find element: By.cssSelector: button.btn.btn-default]
+20:04:24.003 INFO - Executing: [click: 1 [[ChromeDriver: chrome on XP (842404bae38e1a5aabae5e3a243f1eaf)] -> css selector: button.btn.btn-default]])
+20:04:24.051 INFO - Done: [click: 1 [[ChromeDriver: chrome on XP (842404bae38e1a5aabae5e3a243f1eaf)] -> css selector: button.btn.btn-default]]
+20:04:25.055 INFO - Executing: [find element: By.cssSelector: span.guess-span])
+20:04:25.068 INFO - Done: [find element: By.cssSelector: span.guess-span]
+20:04:25.072 INFO - Executing: [get text: 2 [[ChromeDriver: chrome on XP (842404bae38e1a5aabae5e3a243f1eaf)] -> css selector: span.guess-span]])
+20:04:25.086 INFO - Done: [get text: 2 [[ChromeDriver: chrome on XP (842404bae38e1a5aabae5e3a243f1eaf)] -> css selector: span.guess-span]]
+20:04:25.095 INFO - Executing: [delete session: dbf337eb-5a2f-4cba-bf3e-dc02c416c1c7])
+20:04:26.173 INFO - Done: [delete session: dbf337eb-5a2f-4cba-bf3e-dc02c416c1c7]
