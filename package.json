@@ -41,7 +41,7 @@
     "nightwatch": "^0.9.16",
     "saucelabs": "^1.4.0",
     "selenium-download": "^2.0.10",
-    "selenium-server-standalone-jar": "3.3.0",
+    "selenium-server-standalone-jar": "3.4.0",
     "style-loader": "^0.18.2",
     "webpack": "^2.6.1",
     "webpack-dev-server": "^2.4.5"
