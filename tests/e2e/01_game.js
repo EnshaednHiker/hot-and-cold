@@ -1,4 +1,4 @@
-//require('nightwatch/bin/runner.js');
+
 "use strict";
 module.exports = {
     before : function(client) {
