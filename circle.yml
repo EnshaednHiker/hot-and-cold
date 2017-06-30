@@ -1,4 +1,6 @@
 dependencies:
+  node: 
+    version: 6.10.2
   pre:
     - curl -L -o google-chrome.deb https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
     - sudo dpkg -i google-chrome.deb
@@ -6,6 +8,7 @@ dependencies:
     - rm google-chrome.deb
   override:
     - npm install
+    - npm install netlify -g
   # post:
     #  - wget https://saucelabs.com/downloads/sc-latest-linux.tar.gz
     #  - tar -xzf sc-latest-linux.tar.gz
