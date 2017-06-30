@@ -26,7 +26,6 @@ const config = {
       "server_path" : "./node_modules/nightwatch/bin/selenium.jar",  //"./node_modules/nightwatch/bin/selenium.jar",  //"./node_modules/selenium-server-standalone-jar/jar/selenium-server-standalone-3.4.0.jar",
       "log_path" : "",
       "port" : 4444,
-      "host": "127.0.0.1",
       "cli_args" : {
         "webdriver.chrome.driver" : "./node_modules/nightwatch/bin/chromedriver"
       }
@@ -51,7 +50,7 @@ const config = {
       "local": {
         "launch_url": "http://localhost:3000",
         "selenium_port": 4444,
-        "selenium_host": "127.0.0.1",
+        "selenium_host": "localhost",
         "silent": true,
         "screenshots": {
           "enabled": false, 
