@@ -23,7 +23,7 @@ const config = {
 
     "selenium" : {
       "start_process" : true,
-      "server_path" : "./node_modules/nightwatch/bin/selenium.jar",  //"./node_modules/selenium-server-standalone-jar/jar/selenium-server-standalone-3.3.0.jar",
+      "server_path" : "./node_modules/selenium-server-standalone-jar/jar/selenium-server-standalone-3.4.0.jar",  //"./node_modules/nightwatch/bin/selenium.jar",  //"./node_modules/selenium-server-standalone-jar/jar/selenium-server-standalone-3.4.0.jar",
       "log_path" : "",
       "port" : 4444,
       "host": "127.0.0.1",
