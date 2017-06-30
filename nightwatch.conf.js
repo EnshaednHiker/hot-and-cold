@@ -1,17 +1,17 @@
 require ('dotenv').config();
 
-// const selenium = require('selenium-download');
-// const path = require('path');
-// const BINPATH = './node_modules/nightwatch/bin/'; 
+const selenium = require('selenium-download');
+const path = require('path');
+const BINPATH = './node_modules/nightwatch/bin/'; 
 
-// require('fs').stat(BINPATH + 'selenium.jar', function (err, stat) { // got it?
-//   if (err || !stat || stat.size < 1) {
-//     require('selenium-download').ensure(BINPATH, function(error) {
-//       if (error) throw new Error(error); // no point continuing so exit!
-//       console.log('✔ Selenium & Chromedriver downloaded to:', BINPATH);
-//     });
-//   }
-// });
+require('fs').stat(BINPATH + 'selenium.jar', function (err, stat) { // got it?
+  if (err || !stat || stat.size < 1) {
+    require('selenium-download').ensure(BINPATH, function(error) {
+      if (error) throw new Error(error); // no point continuing so exit!
+      console.log('✔ Selenium & Chromedriver downloaded to:', BINPATH);
+    });
+  }
+});
 
 const config = {
     "src_folders" : ["tests/e2e"],
@@ -23,12 +23,12 @@ const config = {
 
     "selenium" : {
       "start_process" : true,
-      "server_path" : "./node_modules\selenium-server-standalone-jar\jar\selenium-server-standalone-3.4.0.jar",
+      "server_path" : "./node_modules/selenium-server-standalone-jar/jar/selenium-server-standalone-3.4.0.jar",
       "log_path" : "",
       "port" : 4444,
       "host": "127.0.0.1",
       "cli_args" : {
-        "webdriver.chrome.driver" : "./node_modules/chromedriver/bin/chromedriver"
+        "webdriver.chrome.driver" : "./node_modules/nightwatch/bin/chromedriver"
       }
     },
     "test_workers" : {"enabled" : true, "workers" : "auto"},
@@ -71,15 +71,15 @@ const config = {
         },
         // "javascriptEnabled": true,
         // "acceptSslCerts": true
-      }
-    },
-        "chrome": { // your local Chrome browser (chromedriver)
-          "desiredCapabilities": {
-            "browserName": "chrome",
-            "javascriptEnabled": true,
-            "acceptSslCerts": true
-          }
-        },
+        }
+      },
+      "chrome": { // your local Chrome browser (chromedriver)
+        "desiredCapabilities": {
+          "browserName": "chrome",
+          "javascriptEnabled": true,
+          "acceptSslCerts": true
+        }
+      },
         // "chromemac": { // browsers used on saucelabs:
         //   "desiredCapabilities": {
         //     "browserName": "chrome",

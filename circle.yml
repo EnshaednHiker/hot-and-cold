@@ -17,7 +17,6 @@ test:
     # - curl --retry 10 --retry-delay 2 -v http://localhost:5000
     # Run selenium tests
     - sleep 20
-    - java -version
     - npm test
   # post:
     # - killall --wait sc  # wait for Sauce Connect to close the tunnel
