@@ -4,7 +4,7 @@
   "description": "a react implementation of a hot and cold number guessing game",
   "main": "index.js",
   "scripts": {
-    "postinstall":"node nightwatch.conf.js",
+    "postinstall": "node nightwatch.conf.js",
     "test": "./node_modules/.bin/nightwatch --env local",
     "sauce": "./node_modules/.bin/nightwatch -e chrome,ie11,android_s4_emulator,iphone_6_simulator",
     "start": "./node_modules/.bin/webpack-dev-server",
@@ -20,6 +20,7 @@
   "dependencies": {
     "bootstrap": "^3.3.7",
     "director": "^1.2.8",
+    "get-port": "^3.1.0",
     "jquery": "^3.2.1",
     "react": "^15.5.4",
     "react-dom": "^15.5.4"

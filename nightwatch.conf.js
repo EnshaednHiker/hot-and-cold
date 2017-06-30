@@ -2,7 +2,8 @@ require ('dotenv').config();
 
 const selenium = require('selenium-download');
 const path = require('path');
-const BINPATH = './node_modules/nightwatch/bin/'; 
+const BINPATH = './node_modules/nightwatch/bin/';
+
 
 require('fs').stat(BINPATH + 'selenium.jar', function (err, stat) { // got it?
   if (err || !stat || stat.size < 1) {
@@ -12,6 +13,7 @@ require('fs').stat(BINPATH + 'selenium.jar', function (err, stat) { // got it?
     });
   }
 });
+
 
 const config = {
     "src_folders" : ["tests/e2e"],
@@ -48,9 +50,7 @@ const config = {
           "waitForConditionTimeout": 10000    // wait for content on the page before continuing
         }
       },
-    "circleci" : {
-      "output_folder" : "${CIRCLE_TEST_REPORTS}"
-    },
+
       "local": {
         "launch_url": "http://localhost:3000",
         "selenium_port": 4444,
@@ -64,7 +64,7 @@ const config = {
           "waitForConditionTimeout": 15000 // on localhost sometimes internet is slow so wait...
         },
         "desiredCapabilities": {
-        "browserName": "chrome",
+        "browserName": "chrome"
         // "chromeOptions": {
         //   "args": [
         //     `Mozilla/5.0 (iPhone; CPU iPhone OS 5_0 like Mac OS X) AppleWebKit/534.46
@@ -72,8 +72,8 @@ const config = {
         //     "--window-size=640,1136" // iphone 5
         //   ]
         },
-        // "javascriptEnabled": true,
-        // "acceptSslCerts": true
+        "javascriptEnabled": true,
+        "acceptSslCerts": true
         }
       },
       "chrome": { // your local Chrome browser (chromedriver)
