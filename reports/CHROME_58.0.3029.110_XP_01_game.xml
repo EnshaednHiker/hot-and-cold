@@ -5,23 +5,14 @@
 
   <testsuite name="01_game"
     errors="0" failures="0" hostname="" id="" package="01_game" skipped="0"
-    tests="6" time="14.98" timestamp="Fri, 30 Jun 2017 03:32:28 GMT">
+    tests="6" time="15.12" timestamp="Fri, 30 Jun 2017 03:41:41 GMT">
   
-    <testcase name="A user can see a title in their browser" classname="01_game" time="4.355" assertions="1">
+    <testcase name="A user can see a title in their browser" classname="01_game" time="4.450" assertions="1">
 
     
     </testcase>
   
-    <testcase name="A user can make a guess" classname="01_game" time="1.449" assertions="3">
-
-    
-
-    
-
-    
-    </testcase>
-  
-    <testcase name="A user can make a second guess with relative feedback" classname="01_game" time="1.234" assertions="3">
+    <testcase name="A user can make a guess" classname="01_game" time="1.446" assertions="3">
 
     
 
@@ -30,17 +21,26 @@
     
     </testcase>
   
-    <testcase name="A user can make at most 20 guesses" classname="01_game" time="7.554" assertions="1">
+    <testcase name="A user can make a second guess with relative feedback" classname="01_game" time="1.242" assertions="3">
+
+    
+
+    
 
     
     </testcase>
   
-    <testcase name="User cannot make more than 20 guesses" classname="01_game" time="0.03200" assertions="1">
+    <testcase name="A user can make at most 20 guesses" classname="01_game" time="7.614" assertions="1">
 
     
     </testcase>
   
-    <testcase name="A user can start a new game by clicking '+New Game link test'" classname="01_game" time="0.3540" assertions="1">
+    <testcase name="User cannot make more than 20 guesses" classname="01_game" time="0.03100" assertions="1">
+
+    
+    </testcase>
+  
+    <testcase name="A user can start a new game by clicking '+New Game link test'" classname="01_game" time="0.3340" assertions="1">
 
     
     </testcase>

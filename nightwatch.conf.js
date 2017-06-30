@@ -64,70 +64,14 @@ const config = {
           "waitForConditionTimeout": 15000 // on localhost sometimes internet is slow so wait...
         },
         "desiredCapabilities": {
-        "browserName": "chrome"
-        // "chromeOptions": {
-        //   "args": [
-        //     `Mozilla/5.0 (iPhone; CPU iPhone OS 5_0 like Mac OS X) AppleWebKit/534.46
-        //     (KHTML, like Gecko) Version/5.1 Mobile/9A334 Safari/7534.48.3`,
-        //     "--window-size=640,1136" // iphone 5
-        //   ]
+        "browserName": "chrome",
+        "marionette": true
         },
         "javascriptEnabled": true,
         "acceptSslCerts": true
         }
-      },
-      "chrome": { // your local Chrome browser (chromedriver)
-        "desiredCapabilities": {
-          "browserName": "chrome",
-          "javascriptEnabled": true,
-          "acceptSslCerts": true
-        }
-      },
-        // "chromemac": { // browsers used on saucelabs:
-        //   "desiredCapabilities": {
-        //     "browserName": "chrome",
-        //     "platform": "OS X 10.11",
-        //     "version": "47"
-        //   }
-        // },
-        // "ie11": {
-        //   "desiredCapabilities": {
-        //     "browserName": "internet explorer",
-        //     "platform": "Windows 10",
-        //     "version": "11.0"
-        //   }
-        // },
-        // "firefox" : {
-        //   "desiredCapabilities": {
-        //     "platform": "XP",
-        //     "browserName": "firefox",
-        //     "version": "33"
-        //   }
-        // },
-        // "internet_explorer_10" : {
-        //   "desiredCapabilities": {
-        //     "platform": "Windows 7",
-        //     "browserName": "internet explorer",
-        //     "version": "10"
-        //   }
-        // },
-        // "android_s4_emulator": {
-        //   "desiredCapabilities": {
-        //     "browserName": "android",
-        //     "deviceOrientation": "portrait",
-        //     "deviceName": "Samsung Galaxy S4 Emulator",
-        //     "version": "4.4"
-        //   }
-        // },
-        // "iphone_6_simulator": {
-        //   "desiredCapabilities": {
-        //     "browserName": "iPhone",
-        //     "deviceOrientation": "portrait",
-        //     "deviceName": "iPhone 6",
-        //     "platform": "OSX 10.10",
-        //     "version": "8.4"
-        //   }
-}
+      }
+    }
       
     
   
