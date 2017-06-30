@@ -33,23 +33,27 @@ const config = {
         "webdriver.chrome.driver" : "./node_modules/nightwatch/bin/chromedriver"
       }
     },
-    "test_workers" : {"enabled" : true, "workers" : "auto"},
+    
     "test_settings" : {
       "default": {
-        "launch_url": "http://localhost:3000", // we're testing a Public or "staging" site on Saucelabs
-        //"selenium_port": 80,
-        //"selenium_host": "ondemand.saucelabs.com",
+        "launch_url": "http://localhost:3000",
+        "selenium_port": 4444,
+        "selenium_host": "127.0.0.1",
         "silent": true,
         "screenshots": {
-          "enabled": false,
+          "enabled": false, 
           "path": ""
-        },
-        "username" : process.env.SAUCE_USERNAME,     // if you want to use Saucelabs remember to
-        "access_key" : process.env.SAUCE_ACCESS_KEY, // export your environment variables (see readme)
+        }, 
         "globals": {
-          "waitForConditionTimeout": 10000    // wait for content on the page before continuing
-        }
-      },
+          "waitForConditionTimeout": 15000 // on localhost sometimes internet is slow so wait...
+        },
+        "desiredCapabilities": {
+        "browserName": "chrome",
+        "marionette": true
+        },
+        "javascriptEnabled": true,
+        "acceptSslCerts": true
+        },
 
       "local": {
         "launch_url": "http://localhost:3000",
