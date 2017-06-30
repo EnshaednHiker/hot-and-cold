@@ -1,4 +1,4 @@
-"use strict";
+
 
 module.exports = {
     
@@ -17,7 +17,7 @@ module.exports = {
         client.assert.title("Hot || Cold");
     },
     'A user can make a guess' : function (client) {
-        let guessedNumber = '5';
+        var guessedNumber = '5';
         client
             .click('input.form-control')
             .keys([`${guessedNumber}`], function (){
@@ -44,7 +44,7 @@ module.exports = {
             });
     },
     'A user can make a second guess with relative feedback' : function (client) {
-        let guessedNumber = 50;
+        var guessedNumber = 50;
         client
             .click('input.form-control')
             .keys([`${guessedNumber}`], function (){
@@ -75,7 +75,7 @@ module.exports = {
 
     },
     'A user can make at most 20 guesses' : function (client){
-        let guessesArray = [5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5];
+        var guessesArray = [5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5];
         guessesArray.forEach(function(guess) {
             client
                 .click('input.form-control')
