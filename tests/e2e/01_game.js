@@ -1,6 +1,7 @@
-const config = require('../../nightwatch.conf.js');
+"use strict";
 
 module.exports = {
+    
     before : function(client) {
         console.log('Setting up client');
         client
@@ -74,7 +75,7 @@ module.exports = {
 
     },
     'A user can make at most 20 guesses' : function (client){
-        guessesArray = [5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5];
+        let guessesArray = [5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5];
         guessesArray.forEach(function(guess) {
             client
                 .click('input.form-control')

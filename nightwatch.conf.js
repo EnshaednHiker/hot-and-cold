@@ -1,10 +1,10 @@
-'use strict';
+"use strict";
 
 require ('dotenv').config();
 
-const selenium = require('selenium-download');
-const path = require('path');
-const BINPATH = './node_modules/nightwatch/bin/';
+var selenium = require('selenium-download');
+var path = require('path');
+var BINPATH = './node_modules/nightwatch/bin/';
 
 
 require('fs').stat(BINPATH + 'selenium.jar', function (err, stat) { // got it?
@@ -17,7 +17,7 @@ require('fs').stat(BINPATH + 'selenium.jar', function (err, stat) { // got it?
 });
 
 
-const config = {
+var config = {
     "src_folders" : ["tests/e2e"],
     "output_folder" : "reports",
     "custom_commands_path" : "",
