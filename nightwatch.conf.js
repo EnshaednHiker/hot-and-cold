@@ -26,6 +26,7 @@ const config = {
       "server_path" : "./node_modules/nightwatch/bin/selenium.jar",  //"./node_modules/nightwatch/bin/selenium.jar",  //"./node_modules/selenium-server-standalone-jar/jar/selenium-server-standalone-3.4.0.jar",
       "log_path" : "",
       "port" : 4444,
+      "host" : "127.0.0.1",
       "cli_args" : {
         "webdriver.chrome.driver" : "./node_modules/nightwatch/bin/chromedriver"
       }
@@ -47,10 +48,13 @@ const config = {
           "waitForConditionTimeout": 10000    // wait for content on the page before continuing
         }
       },
+    "circleci" : {
+      "output_folder" : "${CIRCLE_TEST_REPORTS}"
+    },
       "local": {
         "launch_url": "http://localhost:3000",
         "selenium_port": 4444,
-        "selenium_host": "localhost",
+        "selenium_host": "127.0.0.1",
         "silent": true,
         "screenshots": {
           "enabled": false, 
