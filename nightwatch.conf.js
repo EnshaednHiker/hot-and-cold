@@ -124,9 +124,9 @@ const config = {
         //     "platform": "OSX 10.10",
         //     "version": "8.4"
         //   }
-        }
-      }
-    }
+}
+      
+    
   
 
 
