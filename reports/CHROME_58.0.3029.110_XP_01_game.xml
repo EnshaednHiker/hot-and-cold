@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuites errors="1"
-            failures="1"
+<testsuites errors="0"
+            failures="0"
             tests="6">
 
   <testsuite name="01_game"
-    errors="1" failures="1" hostname="" id="" package="01_game" skipped="3"
-    tests="6" time="7.806" timestamp="Fri, 30 Jun 2017 02:40:16 GMT">
+    errors="0" failures="0" hostname="" id="" package="01_game" skipped="0"
+    tests="6" time="14.71" timestamp="Fri, 30 Jun 2017 02:51:19 GMT">
   
-    <testcase name="A user can see a title in their browser" classname="01_game" time="4.215" assertions="1">
+    <testcase name="A user can see a title in their browser" classname="01_game" time="4.207" assertions="1">
 
     
     </testcase>
   
-    <testcase name="A user can make a guess" classname="01_game" time="1.417" assertions="3">
+    <testcase name="A user can make a guess" classname="01_game" time="1.420" assertions="3">
 
     
 
@@ -21,45 +21,33 @@
     
     </testcase>
   
-    <testcase name="A user can make a second guess with relative feedback" classname="01_game" time="2.174" assertions="1">  <failure message="Testing if element &lt;span.guess-span&gt; contains text: &quot;2&quot;. Element could not be located.">    at Object.&lt;anonymous&gt; (C:\Users\Admin\OneDrive\Documents\Thinkful\projects\hot-and-cold\tests\e2e\01_game.js:53:29)</failure>
+    <testcase name="A user can make a second guess with relative feedback" classname="01_game" time="1.232" assertions="3">
+
+    
+
+    
+
+    
+    </testcase>
+  
+    <testcase name="A user can make at most 20 guesses" classname="01_game" time="7.526" assertions="1">
+
+    
+    </testcase>
+  
+    <testcase name="User cannot make more than 20 guesses" classname="01_game" time="0.03200" assertions="1">
+
+    
+    </testcase>
+  
+    <testcase name="A user can start a new game by clicking '+New Game link test'" classname="01_game" time="0.2950" assertions="1">
 
     
     </testcase>
   
 
   
-    <system-err>
-      ERROR: Unable to locate element: &quot;span.guess-span&quot; using: css selector
-    at command (C:\Users\Admin\OneDrive\Documents\Thinkful\projects\hot-and-cold\node_modules\nightwatch\lib\api\assertions\containsText.js:46:21)
-    at module.exports.BaseAssertion._scheduleAssertion (C:\Users\Admin\OneDrive\Documents\Thinkful\projects\hot-and-cold\node_modules\nightwatch\lib\core\assertion.js:87:17)
-    at module.exports.BaseAssertion._executeCommand (C:\Users\Admin\OneDrive\Documents\Thinkful\projects\hot-and-cold\node_modules\nightwatch\lib\core\assertion.js:82:17)
-    at AssertionInstance.commandFn [as _commandFn] (C:\Users\Admin\OneDrive\Documents\Thinkful\projects\hot-and-cold\node_modules\nightwatch\lib\core\assertion.js:180:21)
-    at AsyncTree.runCommand (C:\Users\Admin\OneDrive\Documents\Thinkful\projects\hot-and-cold\node_modules\nightwatch\lib\core\queue.js:154:30)
-    at AsyncTree.runChildNode (C:\Users\Admin\OneDrive\Documents\Thinkful\projects\hot-and-cold\node_modules\nightwatch\lib\core\queue.js:114:8)
-    at AsyncTree.walkDown (C:\Users\Admin\OneDrive\Documents\Thinkful\projects\hot-and-cold\node_modules\nightwatch\lib\core\queue.js:80:10)
-    at AsyncTree.walkUp (C:\Users\Admin\OneDrive\Documents\Thinkful\projects\hot-and-cold\node_modules\nightwatch\lib\core\queue.js:97:8)
-    at AsyncTree.walkDown (C:\Users\Admin\OneDrive\Documents\Thinkful\projects\hot-and-cold\node_modules\nightwatch\lib\core\queue.js:90:12)
-    at AsyncTree.traverse (C:\Users\Admin\OneDrive\Documents\Thinkful\projects\hot-and-cold\node_modules\nightwatch\lib\core\queue.js:73:8)
-    </system-err>
-  
 
-  
-    
-    <testcase
-      name="A user can make at most 20 guesses" classname="01_game">
-      <skipped />
-    </testcase>
-    
-    <testcase
-      name="User cannot make more than 20 guesses" classname="01_game">
-      <skipped />
-    </testcase>
-    
-    <testcase
-      name="A user can start a new game by clicking '+New Game link test'" classname="01_game">
-      <skipped />
-    </testcase>
-    
   
   </testsuite>
 </testsuites>
