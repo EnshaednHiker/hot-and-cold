@@ -15,7 +15,7 @@ module.exports = {
 
     // 'A user can see a title in their browser' : function (client) {
     //     client.assert.title("Hot || Cold");
-    },
+    //},
     'A user can make a guess' : function (client) {
         var guessedNumber = '5';
         client
