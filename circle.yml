@@ -8,7 +8,7 @@ dependencies:
     - rm google-chrome.deb
   override:
     - npm install
-    - npm install netlify -g
+    - npm install netlify-cli -g
   # post:
     #  - wget https://saucelabs.com/downloads/sc-latest-linux.tar.gz
     #  - tar -xzf sc-latest-linux.tar.gz
