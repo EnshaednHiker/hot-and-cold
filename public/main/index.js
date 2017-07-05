@@ -1,5 +1,7 @@
 import React from 'react';
 import Dom from 'react-dom';
+import {Provider} from 'react-redux';
+import store from './store';
 import NavigationBar from '~/components/NavigationBar/index.js'
 import Game from '~/components/Game/index.js'
 import styles from '~/assets/styles/main.css';
@@ -30,7 +32,9 @@ class Main extends React.Component {
                 <div style={style}>
                     <NavigationBar  />
                     <h1 className="text-center text-white">{this.state.title}</h1>
-                    <Game min="1" max="101" allowedGuesses="20" />
+                    <Provider store={store}>
+                        <Game min="1" max="101" allowedGuesses="20" />
+                    </Provider>
                 </div>
             )
     } 
