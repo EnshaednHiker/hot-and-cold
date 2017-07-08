@@ -5,6 +5,6 @@ export const guess = guess => ({
 });
 
 export const NEW_GAME = "NEW_GAME";
-export const newGame = () => ({
+export const newGame = (boolean) => ({
     type: NEW_GAME
 });

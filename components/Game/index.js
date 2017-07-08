@@ -2,13 +2,14 @@ import React from 'react';
 import Dom from 'react-dom';
 import CSS from '~/assets/styles/game.css';
 import { connect } from 'react-redux';
-import { guess,newGame } from '~/actions'
+import { guess,newGame } from '~/actions';
 
 
 
 export class Game extends React.Component {
     constructor (props){
         super(props)
+        this.state = {}
     this.onSubmit = this.onSubmit.bind(this);
     this.getCurrentGuess = this.getCurrentGuess.bind(this);
     }
@@ -17,26 +18,28 @@ export class Game extends React.Component {
         e.preventDefault();
         let currentGuess = this.getCurrentGuess(e);
         this.props.dispatch(guess(currentGuess));
-        this.refs.input.value = "";
+        this.refs.input.value = this.props.input;
     }
 
     newGame () {
         this.props.dispatch(newGame());
+        this.refs.input.value = this.props.input;
     }
 
     getCurrentGuess(e) {
         let currentGuess = $('form').serializeArray();
-        console.log("current guess: ",currentGuess[0].value);
+        
         return currentGuess[0].value;
     }
 
     render(){
-        
+       
         return (
             <div>                  
                 <div className="container">
                     <div className="background-color-crimson feedback-div game-width">
                         <p className="feedback-text">{this.props.feedback}</p>
+                        
                     </div>
                     <div className="background-color-darkblue game-width form-div">
                         {
@@ -74,7 +77,7 @@ export class Game extends React.Component {
                         <ul className="guess-list">
                             {
                                this.props.pastGuesses.map((pastGuess,index)=>{
-                                    return <li key={index}>{pastGuess}</li>
+                                    return <li key={Math.random().toString(32).substr(2,16)}>{pastGuess}</li>
                                 })
                             }
                         </ul>
@@ -92,7 +95,8 @@ const mapStateToProps = state => {
     pastGuesses: state.pastGuesses,
     numberToGuess: state.numberToGuess,
     input: state.input,
-    feedback: state.feedback
+    feedback: state.feedback,
+    nonce: state.nonce
    }
 };
 

@@ -30,7 +30,9 @@ class Main extends React.Component {
     
         return (
                 <div style={style}>
-                    <NavigationBar  />
+                    <Provider store={store}>
+                        <NavigationBar  />
+                    </Provider>
                     <h1 className="text-center text-white">{this.state.title}</h1>
                     <Provider store={store}>
                         <Game min="1" max="101" allowedGuesses="20" />

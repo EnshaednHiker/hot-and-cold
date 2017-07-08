@@ -32,8 +32,8 @@ function onSubmit (currentGuess,pastGuesses,numberToGuess,feedback) {
     let newFeedback = getFeedback(tempState.currentGuess, tempState.numberToGuess);
     
     if (tempState.pastGuesses.length > 1 && newFeedback !== "win") {
-        console.log("tempState: ", tempState.pastGuesses[0],tempState.pastGuesses[1]);
-        let relativeFeedback = getRelativeFeedback(tempState.currentGuess, tempState.pastGuesses[1], newFeedback);
+        
+        let relativeFeedback = getRelativeFeedback(tempState.currentGuess, tempState.numberToGuess,tempState.pastGuesses[1], newFeedback);
         tempState.feedback = relativeFeedback;
     } else {
         tempState.feedback = newFeedback;
@@ -70,19 +70,23 @@ export const gameReducer = (state = initialState, action) => {
         
     if (action.type === actions.GUESS) {
         let newState = onSubmit(action.guess,state.pastGuesses,state.numberToGuess,state.feedback);
-        return Object.assign({}, state, {
+        
+        const reducerObject = Object.assign({}, state, {
             currentGuess: action.guess,
             pastGuesses: newState.pastGuesses,
             numberToGuess: state.numberToGuess,
             input: null,
-            feedback: newState.feedback
-        })
+            feedback: newState.feedback,
+            nonce: Math.random().toString(32).substr(2,16)
+        });
+        
+        return reducerObject;
     }
     else if (action.type === actions.NEW_GAME){
         return Object.assign({}, state,{
             currentGuess: null,
             pastGuesses: [],
-            numberToGuess: this.getRandomInt(gameStartConditionsMap.min,gameStartConditionsMap.max),
+            numberToGuess: getRandomInt(gameStartConditionsMap.min,gameStartConditionsMap.max),
             input: null,
             feedback: ""
         })

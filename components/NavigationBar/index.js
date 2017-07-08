@@ -1,29 +1,41 @@
 import React from 'react';
 import Dom from 'react-dom';
+import { connect } from 'react-redux';
+import { newGame } from '~/actions'
 
-export default class NavigationBar extends React.Component {
+export  class NavigationBar extends React.Component {
     constructor(props){
         super(props)
-        this.state = {
 
-        }
-        this.onClick = this.onClick.bind(this);
+        this.newGame = this.newGame.bind(this);
     }
 
-    onClick() {
-        window.location.reload();
+    infoModal() {
+        
+    }
+
+    newGame () {
+        this.props.dispatch(newGame());
     }
 
     render(){
 
         return (
-                <nav className="navbar navbar-default navbar-fixed-top">
-                    <div className="container">
-                        <ul className="nav navbar-nav">
-                            <li><a onClick={this.onClick} className="btn" role="button" >+New Game</a></li>
-                        </ul>
-                    </div>
-                </nav>
+                    <nav className="navbar navbar-default navbar-fixed-top">
+                        <div className="container">
+                            <ul className="nav navbar-nav">
+                                <li><a onClick={this.infoModal} className="btn">About</a></li>
+                                <li><a onClick={this.newGame} className="btn" role="button" >+New Game</a></li>
+                            </ul>
+                        </div>
+                    </nav>
             )
     }
 }
+
+const mapDispatchToProps = dispatch => {
+   return ({
+        newGame: () => {dispatch(newGame())}
+   })
+};
+export default connect(mapDispatchToProps)(NavigationBar);
