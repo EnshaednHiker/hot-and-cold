@@ -5,6 +5,12 @@ export const guess = guess => ({
 });
 
 export const NEW_GAME = "NEW_GAME";
-export const newGame = (boolean) => ({
+export const newGame = () => ({
     type: NEW_GAME
+});
+
+export const INFO_MODAL = "INFO_MODAL";
+export const infoModal = (boolean) => ({
+    type: INFO_MODAL,
+    boolean
 });

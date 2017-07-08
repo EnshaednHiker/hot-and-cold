@@ -1,17 +1,18 @@
 import React from 'react';
 import Dom from 'react-dom';
 import { connect } from 'react-redux';
-import { newGame } from '~/actions'
+import { newGame,infoModal } from '~/actions'
 
-export  class NavigationBar extends React.Component {
+export class NavigationBar extends React.Component {
     constructor(props){
         super(props)
 
         this.newGame = this.newGame.bind(this);
+        this.infoModal = this.infoModal.bind(this);
     }
 
     infoModal() {
-        
+        this.props.dispatch(infoModal(true));
     }
 
     newGame () {
@@ -35,7 +36,8 @@ export  class NavigationBar extends React.Component {
 
 const mapDispatchToProps = dispatch => {
    return ({
-        newGame: () => {dispatch(newGame())}
+        newGame: () => {dispatch(newGame())},
+        infoModal: (boolean) => {dispatch(infoModal(boolean))}
    })
 };
 export default connect(mapDispatchToProps)(NavigationBar);

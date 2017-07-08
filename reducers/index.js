@@ -10,7 +10,8 @@ const initialState = {
     pastGuesses: [],
     numberToGuess: getRandomInt(gameStartConditionsMap.min,gameStartConditionsMap.max),
     input: null,
-    feedback: ""    
+    feedback: "",
+    infoModal: false    
 };
 
 const feedbackMap = {
@@ -77,6 +78,7 @@ export const gameReducer = (state = initialState, action) => {
             numberToGuess: state.numberToGuess,
             input: null,
             feedback: newState.feedback,
+            infoModal: false,
             nonce: Math.random().toString(32).substr(2,16)
         });
         
@@ -88,7 +90,13 @@ export const gameReducer = (state = initialState, action) => {
             pastGuesses: [],
             numberToGuess: getRandomInt(gameStartConditionsMap.min,gameStartConditionsMap.max),
             input: null,
-            feedback: ""
+            feedback: "",
+            infoModal: false
+        })
+    }
+    else if (action.type === actions.INFO_MODAL){
+        return Object.assign({}, state,{
+            infoModal: true
         })
     }
     else return state;
