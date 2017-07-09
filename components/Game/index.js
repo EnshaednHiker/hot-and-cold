@@ -11,7 +11,8 @@ export default class Game extends React.Component {
             pastGuesses: [],
             numberToGuess: this.getRandomInt(props.min,props.max),
             input: null,
-            feedback: ""
+            feedback: "",
+            reset: false
         };
 
         this.feedbackMap = {
@@ -30,6 +31,15 @@ export default class Game extends React.Component {
         this.getRelativeFeedback = this.getRelativeFeedback.bind(this);
         this.setFeedback = this.setFeedback.bind(this);
         this.endGame = this.endGame.bind(this)
+    }
+
+    componentWillReceiveProps (props){
+        this.setState({reset: props.reset});
+    }
+
+    resetGame(e,) {
+        this.endGame()
+        this.setState({rese})
     }
 
     onSubmit (e) {
@@ -107,7 +117,7 @@ export default class Game extends React.Component {
     }
 
     render(){
-        
+
         return (
             <div>                  
                 <div className="container">
@@ -117,6 +127,7 @@ export default class Game extends React.Component {
                     <div className="background-color-darkblue game-width form-div">
                         {
                             (()=>{
+
                                 if (this.state.feedback !=="win" && this.state.pastGuesses.length < 20) {
                                     return (
                                         <form onSubmit={this.onSubmit}>
@@ -134,7 +145,8 @@ export default class Game extends React.Component {
                                                 <button onClick={this.endGame} className="btn btn-default lostButton">New Game</button>
                                             </div> 
                                         )
-                                }   else {
+                                }   
+                                else {
                                         return (
                                             <div className="endGame">
                                                 <p>You won!<br />Wanna play a new game?</p>
