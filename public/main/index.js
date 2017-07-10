@@ -36,7 +36,7 @@ class Main extends React.Component {
                 <Provider store={store}>
                     <div style={style}>
                         <NavigationBar  />
-                        <InfoModal content={} active={this.state.isModalActive} />
+                        <InfoModal content={()=>{}} active={this.state.isModalActive} />
                         <h1 className="text-center text-white">{this.state.title}</h1>
                         <Game min="1" max="101" allowedGuesses="20" />
                     </div>

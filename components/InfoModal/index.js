@@ -1,8 +1,7 @@
 import React from 'react';
 import Dom from 'react-dom';
 import { connect } from 'react-redux';
-import { infoModal } from '~/actions'
-
+import { infoModal } from '~/actions';
 
 export class InfoModal extends React.Component {
         constructor(props){
@@ -15,20 +14,30 @@ export class InfoModal extends React.Component {
     }
 
     render() {
+        const stylesOuterModal = {
+            zIndex: 1200,
+            display: "block",
+            backgroundColor: "rgba(0,0,0,0.60)"
+        }
+        const stylesInnerModal = {
+            backgroundColor: "#DB153D",
+            color: "white"
+        }
         if (this.props.infoModal === true) {
+            
             return (
-                <div style={{display:"block"}} className="modal fade" id="myModal" tabIndex="-1" role="dialog" data-ariaLabelledBy="myModalLabel">
-                    <div className="modal-dialog" role="document">
-                        <div className="modal-content">
+                <div style={stylesOuterModal} className="modal" id="myModal" tabIndex="-1" role="dialog" >
+                    <div  className="modal-dialog" role="document">
+                        <div className="modal-content" style={stylesInnerModal}>
                             <div className="modal-header">
-                                <button type="button" onClick={this.onClick} className="close" data-dismiss="modal" data-ariaLabel="Close"><span data-ariaHidden="true">&times;</span></button>
-                                <h4 className="modal-title text-center" id="myModalLabel">About</h4>
+                                <h4 className="modal-title text-center" id="myModalLabel">About: How to Play Hot or Cold</h4>
                             </div>
                             <div className="modal-body">
                               <h3>Rules Go Here</h3>
+                              <p>More rules</p>
                             </div>
                             <div className="modal-footer">
-                                <button type="button" onClick={this.onClick} className="btn btn-default" data-dismiss="modal">Close</button>
+                                <button type="button" onClick={this.onClick} className="btn btn-default">Close</button>
                             </div>
                         </div>
                     </div>
@@ -37,17 +46,11 @@ export class InfoModal extends React.Component {
         }
         else {
             return (
-                <div></div>
+                <span></span>
             )
         }    
     }
 }
-
-// const mapDispatchToProps = dispatch => {
-//    return ({
-//         infoModal: (boolean) => {dispatch(infoModal(boolean))}
-//    })
-// };
 
 const mapStateToProps = state => {
     return ({
@@ -55,4 +58,11 @@ const mapStateToProps = state => {
     })
 }
 
+const mapDispatchToProps = dispatch => {
+    return ({
+       infoModal : this.props.dispatch(infoModal(false))
+    })
+}
+
 export default connect(mapStateToProps)(InfoModal);
+

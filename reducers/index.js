@@ -96,7 +96,7 @@ export const gameReducer = (state = initialState, action) => {
     }
     else if (action.type === actions.INFO_MODAL){
         return Object.assign({}, state,{
-            infoModal: true
+            infoModal: action.boolean
         })
     }
     else return state;
