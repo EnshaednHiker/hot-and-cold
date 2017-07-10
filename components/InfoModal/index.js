@@ -30,14 +30,21 @@ export class InfoModal extends React.Component {
                     <div  className="modal-dialog" role="document">
                         <div className="modal-content" style={stylesInnerModal}>
                             <div className="modal-header">
-                                <h4 className="modal-title text-center" id="myModalLabel">About: How to Play Hot or Cold</h4>
+                                <h4 className="modal-title text-center" id="myModalLabel">About: How to Play 'Hot or Cold'</h4>
                             </div>
                             <div className="modal-body">
-                              <h3>Rules Go Here</h3>
-                              <p>More rules</p>
+							    <p>This is a Hot or Cold Number Guessing Game. The game goes like this: </p>
+							    <ul>
+							    	<li>1. I pick a <strong>random secret number</strong> between 1 to 100 and keep it hidden.</li>
+							    	<li>2. You need to <strong>guess</strong> until you can find the hidden secret number.</li>
+							    	<li>3. You will <strong>get feedback</strong> on how close ("hot") or far ("cold") your guess is.</li>
+							    	<li>4. You will also receive <strong>relative feedback</strong> so you know whether you're moving in the right direction.</li>
+							    </ul>
+							    
                             </div>
                             <div className="modal-footer">
-                                <button type="button" onClick={this.onClick} className="btn btn-default">Close</button>
+                                <p>So, are you ready?</p>
+                                <button type="button" onClick={this.onClick} className="btn btn-default">Got it!</button>
                             </div>
                         </div>
                     </div>
