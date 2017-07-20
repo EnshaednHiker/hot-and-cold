@@ -9,6 +9,7 @@ export default class InfoModal extends React.Component {
             isActive: props.active
         }
         console.log(this);
+        this.infoModalClose = this.infoModalClose.bind(this);
     }
 
     componentWillReceiveProps (props){
@@ -29,9 +30,10 @@ export default class InfoModal extends React.Component {
                     <div className="info-modal-background">
                     </div>
                     <div className="info-modal-container container">
-                        <button className="btn btn-default info-modal-close-button" onClick={this.infoModalClose.bind(this)}>x</button>
+                        <button className="btn btn-default info-modal-close-button" onClick={this.infoModalClose}>x</button>
                         {this.props.content}
-                    </div>   
+                    </div>
+                    <button className="btn btn-default" type="button" onClick={this.infoModalClose}>Got It!</button>   
                 </div>
             )
         }
@@ -42,4 +44,3 @@ export default class InfoModal extends React.Component {
     }
 }
 
-<button className="btn btn-default" type="submit">Got It!</button>
