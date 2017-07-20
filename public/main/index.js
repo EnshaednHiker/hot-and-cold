@@ -1,22 +1,41 @@
 import React from 'react';
 import Dom from 'react-dom';
+<<<<<<< HEAD
 import {Provider} from 'react-redux';
 import store from './store';
 import NavigationBar from '~/components/NavigationBar/index.js'
 import Game from '~/components/Game/index.js';
 import InfoModal from '~/components/InfoModal/index.js'
+=======
+import NavigationBar from '~/components/NavigationBar';
+import Game from '~/components/Game';
+import InfoModal from '~/components/InfoModal';
+>>>>>>> master
 import styles from '~/assets/styles/main.css';
-
+import About from  '~/components/About';
 
 class Main extends React.Component {
     constructor(){
         super()
         this.state = {
-            title: 'HOT or COLD' 
+            title: 'HOT or COLD',
+            isModalActive: false,
+            newGame: false 
+        }
+        this.navigationClicked = this.navigationClicked.bind(this);
+    }
+
+    navigationClicked(e,navigationAction){
+        if(navigationAction==="ABOUT"){
+            this.setState({isModalActive: true});
+        }
+        else if (navigationAction === "NEW_GAME") {
+            this.setState({newGame:true})
         }
     }
 
     render() {
+        console.log(this.state);
         const style = {
             backgroundColor: '#1F253D',
             position: 'absolute',
@@ -33,6 +52,7 @@ class Main extends React.Component {
 
     
         return (
+<<<<<<< HEAD
                 <Provider store={store}>
                     <div style={style}>
                         <NavigationBar  />
@@ -41,10 +61,18 @@ class Main extends React.Component {
                         <Game min="1" max="101" allowedGuesses="20" />
                     </div>
                 </Provider>
+=======
+                <div style={style}>
+                    <NavigationBar onClick={this.navigationClicked}  />
+                    <InfoModal content={<About />} onClose={()=>{}} active={this.state.isModalActive} />
+                    <h1 className="text-center text-white">{this.state.title}</h1>
+                    <Game min="1" max="101" allowedGuesses="20" reset={this.state.newGame} />
+                </div>
+>>>>>>> master
             )
     } 
 }
- 
+
 export default function (next) {
     Dom.render(<Main />, document.getElementById('root'));
 } 

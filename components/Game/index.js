@@ -5,6 +5,20 @@ import { connect } from 'react-redux';
 import { guess,newGame } from '~/actions';
 
 
+<<<<<<< HEAD
+=======
+export default class Game extends React.Component {
+    constructor(props){
+        super()
+        this.state ={
+            currentGuess: null,
+            pastGuesses: [],
+            numberToGuess: this.getRandomInt(props.min,props.max),
+            input: null,
+            feedback: "",
+            reset: false
+        };
+>>>>>>> master
 
 export class Game extends React.Component {
     constructor (props){
@@ -13,7 +27,20 @@ export class Game extends React.Component {
     this.onSubmit = this.onSubmit.bind(this);
     this.getCurrentGuess = this.getCurrentGuess.bind(this);
     }
+<<<<<<< HEAD
     
+=======
+
+    componentWillReceiveProps (props){
+        this.setState({reset: props.reset});
+    }
+
+    resetGame(e,) {
+        this.endGame()
+        this.setState({rese})
+    }
+
+>>>>>>> master
     onSubmit (e) {
         e.preventDefault();
         let currentGuess = this.getCurrentGuess(e);
@@ -33,7 +60,11 @@ export class Game extends React.Component {
     }
 
     render(){
+<<<<<<< HEAD
        
+=======
+
+>>>>>>> master
         return (
             <div>                  
                 <div className="container">
@@ -44,7 +75,12 @@ export class Game extends React.Component {
                     <div className="background-color-darkblue game-width form-div">
                         {
                             (()=>{
+<<<<<<< HEAD
                                 if (this.props.feedback !=="win" && this.props.pastGuesses.length < 20) {
+=======
+
+                                if (this.state.feedback !=="win" && this.state.pastGuesses.length < 20) {
+>>>>>>> master
                                     return (
                                         <form onSubmit={this.onSubmit}>
                                            <div className="form-group">
@@ -61,7 +97,8 @@ export class Game extends React.Component {
                                                 <button onClick={this.newGame} className="btn btn-default lostButton">New Game</button>
                                             </div> 
                                         )
-                                }   else {
+                                }   
+                                else {
                                         return (
                                             <div className="endGame">
                                                 <p>You won!<br />Wanna play a new game?</p>
