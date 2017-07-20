@@ -1,8 +1,10 @@
 import React from 'react';
 import Dom from 'react-dom';
-import NavigationBar from '~/components/NavigationBar';
-import Game from '~/components/Game';
-import InfoModal from '~/components/InfoModal';
+import {Provider} from 'react-redux';
+import store from './store';
+import NavigationBar from '~/components/NavigationBar/index.js'
+import Game from '~/components/Game/index.js';
+import InfoModal from '~/components/InfoModal/index.js'
 import styles from '~/assets/styles/main.css';
 import About from  '~/components/About';
 
@@ -39,14 +41,19 @@ class Main extends React.Component {
             zIndex: 99,
             color: 'white'
         }
+
+
+
     
         return (
-                <div style={style}>
-                    <NavigationBar onClick={this.navigationClicked}  />
-                    <InfoModal content={<About />} onClose={()=>{}} active={this.state.isModalActive} />
-                    <h1 className="text-center text-white">{this.state.title}</h1>
-                    <Game min="1" max="101" allowedGuesses="20" reset={this.state.newGame} />
-                </div>
+                <Provider store={store}>
+                    <div style={style}>
+                        <NavigationBar  />
+                        <InfoModal content={()=>{}} active={this.state.isModalActive} />
+                        <h1 className="text-center text-white">{this.state.title}</h1>
+                        <Game min="1" max="101" allowedGuesses="20" />
+                    </div>
+                </Provider>
             )
     } 
 }
